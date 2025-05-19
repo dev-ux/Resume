@@ -1,0 +1,38 @@
+
+<section class="hero">
+  <div class="hero-content" [@fadeIn]>
+    <div class="hero-profile">
+      <div class="profile-photo">
+        <img src="../../assets/images/pict.jpg" alt="{{name}}" class="rounded-image" />
+      </div>
+      <div class="profile-info">
+        <h1>{{name}}</h1>
+        <h2>{{role}}</h2>
+        <p>{{description}}</p>
+        <p class="intro">{{ 'home.my_home_presentation_l1' | translate }} <br /> 
+          {{ 'home.my_home_presentation_l2' |translate }} 
+          <a href="https://www.iscod.fr/">{{'home.school_igm' | translate }}</a>
+          {{'home.work_info' | translate }} <a href="https://www.wisetech-eng.com/"> Wisetech-Eng </a>.
+           {{ 'home.my_home_presentation_l3' | translate }}
+          {{ 'home.my_home_presentation_l4' | translate }} <br /> <br />
+
+
+        </p>
+        <div class="download-section btn btn-primary">
+          <button (click)="downloadCV()" class="btn btn-primary btn-round download-cv-btn">
+            <i class="fa fa-download"></i> Download CV
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="skills">
+      <div class="skills-categories">
+        <div class="category" *ngFor="let category of skills">
+          <h4>{{category.category}}</h4>
+          <div class="skills-list">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

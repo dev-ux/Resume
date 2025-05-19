@@ -1,0 +1,64 @@
+{
+  "home": {
+    "title": "Kassi Marvin",
+    "my_home_presentation_l1" : "Je suis KASSI MARVIN CLÉMENT JUNIOR, Développeur Full Stack (Angular, React Native/JS (interfaces dynamiques et responsives); Spring Boot (Java), Symfony (PHP), architectures RESTful et microservices; Git (GitHub/Bitbucket), CI/CD, méthodes Agile) et Big Data.",
+    "my_home_presentation_l2": "Actuellement en formation à",
+    "my_function": "Développeur Full Stack",
+    "school_igm": "ISCOD",
+    "work_info": "et en alternance chez",
+    "my_home_presentation_l3": "Spécialisé en",
+    "my_home_presentation_l4": "Passionné par la technologie et l'innovation",
+    "my_home_presentation_l5": "L'avenir appartient à ceux qui croient à la beauté de leurs rêves.",
+    "presentation": "Bienvenue sur mon portfolio",
+    "role": "Développeur Full Stack",
+    "description": "Étudiant en Génie Logiciel à ISCOD | Apprenti chez Wisetech-eng",
+    "skills": "Angular, Node.js, TypeScript, JavaScript, HTML5, CSS3",
+    "featuredProject": {
+      "title": "Site de Portfolio",
+      "description": "Un site de portfolio moderne construit avec Angular pour présenter mes projets et compétences.",
+      "tech": "Angular, TypeScript, CSS3"
+    }
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "form": {
+      "name": "Votre Nom",
+      "email": "Votre Email",
+      "subject": "Sujet",
+      "message": "Votre Message",
+      "submit": "Envoyer",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès!",
+      "errors": {
+        "required": "Ce champ est requis",
+        "minlength": "La longueur minimale est de {{requiredLength}} caractères",
+        "email": "Veuillez entrer une adresse email valide"
+      }
+    },
+    "info": {
+      "email": "your.email@example.com",
+      "phone": "+123 456 7890",
+      "location": "Votre Ville, Pays"
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "about": {
+    "aboutme1": "Je suis un ingénieur logiciel passionné, avec une solide expertise en développement full-stack. Actuellement en dernière année à l'ISCOD, j'acquiers une expérience industrielle concrète dans le cadre de mon alternance chez Wisetech-eng.",
+    "aboutme2": "Mon expertise technique repose sur le développement Angular, et je suis constamment à la recherche de nouveaux défis pour enrichir mes compétences et contribuer à des projets significatifs.",
+    "aboutme3": "Années d'expérience",
+    "aboutme4": "Projets terminés",
+    "aboutme5": "Technologies maîtrisées"
+  },
+  "skills": {
+    "title": "Compétences"
+  },
+  "projects": {
+    "title": "Projets"
+  }
+}

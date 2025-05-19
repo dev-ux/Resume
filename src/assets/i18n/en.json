@@ -1,0 +1,66 @@
+{
+  "home": {
+    "welcome": "Welcome to my portfolio",
+    "title": "Kassi Marvin",
+    "role": "Full Stack Developer",
+    "my_home_presentation_l1": "I am KASSI MARVIN CLÉMENT JUNIOR, a Full-Stack Developer specializing in Angular, React Native/JS (interfaces dynamiques et responsives); Spring Boot (Java), Symfony (PHP), architectures RESTful et microservices; Git (GitHub/Bitbucket), CI/CD, méthodes Agile) et Big Data.",
+    "my_home_presentation_l2": "Currently pursuing my degree at",
+    "my_function": "Full Stack Developer",
+    "school_igm": "ISCOD",
+    "work_info": "and working as an apprentice at",
+    "my_home_presentation_l3": "Specialized in",
+    "my_home_presentation_l4": "Passionate about technology and innovation",
+    "my_home_presentation_l5": "The future belongs to those who believe in the beauty of their dreams.",
+    "presentation": "Welcome to my portfolio",
+    "description": "5th Year Software Engineering Student at ISCOD | Wisetech-eng Apprentice",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "loading": "Loading projects..."
+  },
+  "contact": {
+    "title": "Contact Me",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "errors": {
+        "required": "This field is required",
+        "minlength": "Minimum length is {{requiredLength}} characters",
+        "email": "Please enter a valid email address"
+      }
+    },
+    "info": {
+      "email": "your.email@example.com",
+      "phone": "+123 456 7890",
+      "location": "Your City, Country"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "about": {
+    "aboutme1": "I am a passionate software engineer with a strong foundation in full-stack development. Currently pursuing my final year at ISCOD, I'm gaining valuable industry experience through my apprenticeship at Wisetech-eng.",
+    "aboutme2": "My technical expertise lies in Angular development, and I'm constantly seeking new challenges to enhance my skills and contribute to meaningful projects.",
+    "aboutme3": "Years of Experience",
+    "aboutme4": "Completed Projects",
+    "aboutme5": "Technologies Mastered"
+  },
+  "skills": {
+    "title": "Technical Skills"
+  },
+  "projects": {
+    "title": "My Projects"
+  },
+  "home": {
+    "loading": "Loading projects..."
+  }
+}

@@ -1,0 +1,245 @@
+@import '../assets/css/nucleo-icons.css';
+@import '../assets/css/demo.css';
+@import '../assets/sass/paper-kit.scss';
+
+/* Custom styles */
+
+/* Page Header */
+.page-header {
+  background-size: cover;
+  background-position: center center;
+  min-height: 70vh;
+  position: relative;
+  overflow: hidden;
+  
+  .filter {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .presentation-title {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
+  }
+  
+  .presentation-subtitle {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    margin-bottom: 3rem;
+  }
+  
+  .fog-low {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+    &.right {
+      transform: scaleX(-1);
+    }
+    
+    img {
+      width: 100%;
+      opacity: 0.3;
+    }
+  }
+  
+  .moving-clouds {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center bottom;
+    opacity: 0.2;
+  }
+}
+
+/* Profile Content */
+.profile-content {
+  padding: 80px 0;
+  background: #f8f9fa;
+  
+  .owner {
+    text-align: center;
+    margin-bottom: 60px;
+    
+    .avatar {
+      margin-bottom: 40px;
+      
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+      }
+    }
+    
+    .name {
+      h4 {
+        color: #2c3e50;
+        font-weight: 700;
+        font-size: 2.8rem;
+        margin-bottom: 0.8rem;
+      }
+      
+      h6 {
+        color: #3498db;
+        font-weight: 500;
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+  
+  .presentation-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 2rem;
+      
+      a {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: 500;
+        
+        &:hover {
+          text-decoration: underline;
+          color: #2980b9;
+        }
+      }
+    }
+    
+    .proverbe {
+      font-style: italic;
+      color: #666;
+      font-size: 1.4rem;
+      margin-top: 3rem;
+      padding: 1rem;
+      border-left: 4px solid #3498db;
+      background: rgba(52, 152, 219, 0.05);
+    }
+  }
+  
+  .download-section {
+    margin-top: 50px;
+    text-align: center;
+    
+    .download-cv-btn {
+      font-size: 1.2rem;
+      padding: 14px 40px;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+      background: linear-gradient(45deg, #3498db, #2980b9);
+      
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+        background: linear-gradient(45deg, #2980b9, #3498db);
+      }
+      
+      i {
+        margin-right: 10px;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+    
+    
+    .name {
+      h4 {
+        color: #333;
+        font-weight: 600;
+      }
+      
+      h6 {
+        color: #666;
+        font-weight: 400;
+      }
+    }
+  
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    
+    a {
+      color: #00aced;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .proverbe {
+    font-style: italic;
+    color: #666;
+    font-size: 1.2rem;
+  }
+
+
+/* Navigation */
+.navbar {
+  background: transparent !important;
+  
+  .navbar-brand {
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+  
+  .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: #00aced !important;
+    }
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-header {
+    min-height: 50vh;
+    
+    .presentation-title {
+      font-size: 3rem;
+    }
+    
+    .presentation-subtitle {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .profile-content {
+    padding: 40px 0;
+  }
+}

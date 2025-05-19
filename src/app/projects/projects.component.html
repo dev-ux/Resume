@@ -1,0 +1,31 @@
+<section class="projects">
+  <div class="container">
+    <h2 translate="projects.title">My Projects</h2>
+    <div class="projects-grid">
+      <div *ngIf="!projects.length" class="loading">
+        <p translate="home.loading">Loading projects...</p>
+      </div>
+      <div *ngFor="let project of projects" class="project-card">
+        <div class="project-image">
+          <img 
+            [src]="project.picture"
+            [alt]="project.name"
+            class="project-image"
+            [ngClass]="{ 'loading': !project.picture || project.picture === '' }"
+            (error)="project.picture = '/assets/images/projects/default-project.png'"
+          />
+        </div>
+        <div class="project-content">
+          <h3>{{ project.name }}</h3>
+          <p>{{ project.short_description }}</p>
+          <div class="project-tech">
+            <span *ngFor="let tech of project.programingLangage.split(';')">
+              {{ tech }}
+            </span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,124 @@
+{
+  "projects": {
+    "kunto": {
+      "description": {
+        "en": "A comprehensive e-commerce platform for sports equipment featuring modern UI/UX design. Built with Angular and Node.js, it includes features like product catalog, shopping cart, user authentication, and payment integration.",
+        "fr": "Une plateforme e-commerce complète pour l'équipement sportif, avec un design moderne et responsive. Développée avec Angular et Node.js, elle inclut un catalogue de produits, un panier d'achat, une authentification utilisateur et une intégration de paiement."
+      },
+      "short_description": {
+        "en": "Sports equipment e-commerce platform",
+        "fr": "Plateforme e-commerce d'équipement sportif"
+      }
+    },
+    "leTexto": {
+      "description": {
+        "en": "A web-based text analysis platform that helps users understand and visualize text data. Features include sentiment analysis, keyword extraction, and interactive visualizations. Built with modern web technologies including React and Node.js.",
+        "fr": "Une plateforme d'analyse et de visualisation de texte qui aide les utilisateurs à comprendre et analyser les données textuelles. Fonctionnalités incluant l'analyse de sentiment, l'extraction de mots-clés et des visualisations interactives. Développée avec les technologies web modernes."
+      },
+      "short_description": {
+        "en": "Text analysis and visualization platform",
+        "fr": "Plateforme d'analyse de texte"
+      }
+    },
+    "snake": {
+      "description": {
+        "en": "A classic Snake game implemented using Python and upemtk library. The game features smooth graphics and intuitive controls, with multiple difficulty levels and score tracking.",
+        "fr": "Un jeu Snake classique implémenté avec Python et la bibliothèque upemtk. Le jeu comprend des graphismes fluides, des contrôles intuitifs, plusieurs niveaux de difficulté et un système de score."
+      },
+      "short_description": {
+        "en": "Classic Snake game with modern graphics",
+        "fr": "Jeu Snake classique avec graphismes modernes"
+      }
+    },
+    "gameOfStools": {
+      "description": {
+        "en": "A strategic board game implemented in C using MLV-2.0.2 graphics library. Players must strategically place stools to win. Features include turn-based gameplay, AI opponent, and multiple game modes.",
+        "fr": "Un jeu de plateau stratégique implémenté en C avec la bibliothèque graphique MLV-2.0.2. Les joueurs doivent placer stratégiquement des tabourets pour gagner. Fonctionnalités incluant un jeu par tour, un adversaire IA et plusieurs modes de jeu."
+      },
+      "short_description": {
+        "en": "Strategic board game with MLV graphics",
+        "fr": "Jeu de plateau stratégique avec graphismes MLV"
+      }
+    },
+    "shootemUp": {
+      "description": {
+        "en": "A fast-paced shoot'em up game developed in C with MLV-2.0.2. Features multiple enemies, power-ups, and a scoring system. Includes smooth animations and responsive controls.",
+        "fr": "Un jeu de tir rapide développé en C avec MLV-2.0.2. Fonctionnalités incluant plusieurs ennemis, des bonus, et un système de score. Comprend des animations fluides et des contrôles réactifs."
+      },
+      "short_description": {
+        "en": "Fast-paced shoot'em up game",
+        "fr": "Jeu de tir rapide"
+      }
+    },
+    "hanabi": {
+      "description": {
+        "en": "A cooperative card game implemented in Java using Eclipse. Players work together to create fireworks displays. Features include turn-based gameplay, card management, and multiplayer support.",
+        "fr": "Un jeu de cartes coopératif implémenté en Java avec Eclipse. Les joueurs travaillent ensemble pour créer des feux d'artifice. Fonctionnalités incluant un jeu par tour, la gestion des cartes et le support multijoueur."
+      },
+      "short_description": {
+        "en": "Cooperative card game",
+        "fr": "Jeu de cartes coopératif"
+      }
+    },
+    "chatOs": {
+      "description": {
+        "en": "A chat application built with Java and Eclipse. Features real-time messaging, user management, and message history. Includes group chat support and user authentication.",
+        "fr": "Une application de chat construite avec Java et Eclipse. Fonctionnalités incluant la messagerie en temps réel, la gestion des utilisateurs et l'historique des messages. Comprend le support des conversations de groupe et l'authentification des utilisateurs."
+      },
+      "short_description": {
+        "en": "Real-time chat application",
+        "fr": "Application de chat en temps réel"
+      }
+    },
+    "teseMinotor": {
+      "description": {
+        "en": "A maze game featuring Theseus and the Minotaur, implemented in Python. Navigate through challenging mazes using pathfinding algorithms. Features include multiple maze levels and score tracking.",
+        "fr": "Un jeu de labyrinthe mettant en scène Thésée et le Minotaure, implémenté en Python. Navigation à travers des labyrinthes complexes utilisant des algorithmes de recherche de chemin. Fonctionnalités incluant plusieurs niveaux de labyrinthe et un système de score."
+      },
+      "short_description": {
+        "en": "Maze game with Theseus and Minotaur",
+        "fr": "Jeu de labyrinthe avec Thésée et Minotaure"
+      }
+    },
+    "siteVenteVin": {
+      "description": {
+        "en": "A comprehensive wine e-commerce website built with PHP, HTML, CSS, JavaScript, and PostgreSQL. Features include product catalog, shopping cart, user authentication, and payment integration.",
+        "fr": "Un site e-commerce complet pour le vin, construit avec PHP, HTML, CSS, JavaScript et PostgreSQL. Fonctionnalités incluant un catalogue de produits, un panier d'achat, une authentification utilisateur et une intégration de paiement."
+      },
+      "short_description": {
+        "en": "Wine e-commerce website",
+        "fr": "Site e-commerce de vin"
+      }
+    },
+    "towerControl": {
+      "description": {
+        "en": "A tower control simulation game implemented in C++ with OpenCV. Manage air traffic and prevent collisions. Features include real-time flight tracking and weather simulation.",
+        "fr": "Un jeu de simulation de contrôle de tour implémenté en C++ avec OpenCV. Gestion du trafic aérien et prévention des collisions. Fonctionnalités incluant le suivi des vols en temps réel et la simulation météo."
+      },
+      "short_description": {
+        "en": "Tower control simulation game",
+        "fr": "Jeu de simulation de contrôle de tour"
+      }
+    },
+    "deepPuzzleSolving": {
+      "description": {
+        "en": "A deep learning-based puzzle solver implemented using Python, numpy, and torch. Solves complex puzzles using neural networks and pathfinding algorithms.",
+        "fr": "Un solveur de puzzles basé sur l'apprentissage profond implémenté avec Python, numpy et torch. Résout des puzzles complexes en utilisant des réseaux de neurones et des algorithmes de recherche de chemin."
+      },
+      "short_description": {
+        "en": "Deep learning puzzle solver",
+        "fr": "Solveur de puzzles avec apprentissage profond"
+      }
+    },
+    "rayTracing": {
+      "description": {
+        "en": "A ray tracing implementation in C++ using OpenCV. Generates realistic 3D graphics through ray tracing techniques. Features include global illumination and anti-aliasing.",
+        "fr": "Une implémentation de ray tracing en C++ avec OpenCV. Génère des graphiques 3D réalistes grâce aux techniques de ray tracing. Fonctionnalités incluant l'éclairage global et l'anti-crénelage."
+      },
+      "short_description": {
+        "en": "Realistic 3D graphics using ray tracing",
+        "fr": "Graphiques 3D réalistes avec ray tracing"
+      }
+    }
+  }
+}
