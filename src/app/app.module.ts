@@ -14,6 +14,9 @@ import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
+import { TestContactComponent } from './contact/test-contact.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
 import { AppTranslateLoader } from './app.translate.loader';
 
 const routes: Routes = [
@@ -21,7 +24,10 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'projects', component: ProjectsComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'blog/:id', component: BlogDetailComponent },
+  { path: 'test-contact', component: TestContactComponent }
 ];
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -35,7 +41,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AboutComponent,
     SkillsComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    TestContactComponent
   ],
   imports: [
     BrowserModule,

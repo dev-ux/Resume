@@ -1,21 +1,20 @@
 .hero {
-  background: linear-gradient(rgba(74, 144, 226, 0.9), rgba(74, 144, 226, 0.9)), url('/assets/images/hero-bg.jpg');
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  padding: 2rem;
   color: white;
 }
 
 .hero-content {
   max-width: 1200px;
   width: 100%;
-  text-align: center;
+  padding: 1rem;
 }
 
 .hero-profile {
@@ -23,20 +22,22 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
-.profile-photo {
-  flex: 0 0 auto;
-}
 
 .profile-photo img {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
+}
+
+.profile-info {
+  flex: 1;
+  text-align: left;
 }
 
 .profile-photo img:hover {
@@ -49,16 +50,16 @@
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
-  color: white;
 }
 
 .hero h2 {
-  font-size: 2rem;
+  font-size: clamp(1.25rem, 3vw, 2rem);
   margin-bottom: 1.5rem;
-  color: rgba(255, 255, 255, 0.9);
+  opacity: 0.9;
 }
+
 
 .hero p {
   font-size: 1.2rem;
@@ -119,22 +120,20 @@
   .hero-profile {
     flex-direction: column;
     text-align: center;
-  }
-  
-  .profile-photo {
-    margin-bottom: 2rem;
+    gap: 2rem;
   }
   
   .profile-info {
     text-align: center;
   }
   
-  .hero h1 {
-    font-size: 2.5rem;
+  .profile-photo img {
+    width: 150px;
+    height: 150px;
   }
   
-  .hero h2 {
-    font-size: 1.5rem;
+  .hero {
+    padding-top: 6rem; /* Pour compenser la navbar fixed */
   }
 }
 
@@ -263,7 +262,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.5  rem;
   }
   
   .hero h2 {
@@ -272,6 +271,8 @@
   
   .hero-content {
     padding: 1rem;
+    margin-top: 100px;
+    font-size: xx-small;
   }
   
   .skills-list {

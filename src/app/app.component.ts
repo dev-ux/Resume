@@ -9,10 +9,22 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  isMenuOpen = false;
+  scrolled = false;
+  currentLang = 'fr';
+
   constructor(
     private http: HttpClient,
     private translate: TranslateService
-  ) {}
+  ) {
+    window.addEventListener('scroll', () => {
+      this.scrolled = window.scrollY > 50;
+    });
+    
+    // Set the default language
+    this.translate.setDefaultLang('fr');
+    this.translate.use('fr');
+  }
 
   ngOnInit(): void {
     // Initialization code if needed
@@ -33,16 +45,18 @@ export class AppComponent implements OnInit {
     );
   }
 
-  changeLanguage(language: string) {
-    if (language && ['en', 'fr'].includes(language)) {
-      this.translate.use(language);
+  onLangChange(lang: string) {
+    if (lang && ['en', 'fr'].includes(lang)) {
+      this.currentLang = lang;
+      this.translate.use(lang);
     }
   }
 
-  sidebarToggle() {
-    const navbarToggler = document.getElementById('navbarToggler');
-    if (navbarToggler) {
-      navbarToggler.classList.toggle('show');
-    }
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  onMenuClick() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }

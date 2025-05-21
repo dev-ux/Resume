@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Build output
+dist/
+
+# Angular cache
+.angular/
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+
+# Local Netlify folder
+.netlify

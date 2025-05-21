@@ -5,25 +5,30 @@
       <div *ngIf="!projects.length" class="loading">
         <p translate="home.loading">Loading projects...</p>
       </div>
-      <div *ngFor="let project of projects" class="project-card">
+      <div *ngFor="let project of projects" class="project-card" [routerLink]="['/projects', project.id]">
         <div class="project-image">
           <img 
-            [src]="project.picture"
+            [src]="project.image"
             [alt]="project.name"
             class="project-image"
-            [ngClass]="{ 'loading': !project.picture || project.picture === '' }"
-            (error)="project.picture = '/assets/images/projects/default-project.png'"
+            [ngClass]="{ 'loading': !project.image || project.image === '' }"
+            (error)="project.image = '/assets/images/projects/default-project.png'"
           />
         </div>
         <div class="project-content">
           <h3>{{ project.name }}</h3>
-          <p>{{ project.short_description }}</p>
+          <p>{{ project.description }}</p>
           <div class="project-tech">
-            <span *ngFor="let tech of project.programingLangage.split(';')">
+            <span *ngFor="let tech of project.technologies">
               {{ tech }}
             </span>
           </div>
-          
+          <div class="project-links">
+            <a *ngIf="project.github" [href]="project.github" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+           
+          </div>
         </div>
       </div>
     </div>

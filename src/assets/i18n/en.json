@@ -45,7 +45,8 @@
     "about": "About",
     "skills": "Skills",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "blog": "Blog"
   },
   "about": {
     "aboutme1": "I am a passionate software engineer with a strong foundation in full-stack development. Currently pursuing my final year at ISCOD, I'm gaining valuable industry experience through my apprenticeship at Wisetech-eng.",

@@ -37,7 +37,8 @@ export class ContactComponent implements OnInit {
           this.isSubmitting = false;
         },
         error: (error: any) => {
-          this.errorMessage = 'Error sending message. Please try again later.';
+          console.error('Contact Form Error:', error);
+          this.errorMessage = error?.error?.message || error?.message || 'Error sending message. Please try again later.';
           this.successMessage = '';
           this.isSubmitting = false;
         }
