@@ -18,6 +18,10 @@ import { ContactComponent } from './contact/contact.component';
 import { TestContactComponent } from './contact/test-contact.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
+import { TechnicalSkillComponent } from './technical-skill/technical-skill.component';
+import { ReactSkillComponent } from './skills/react/react-skill.component';
+import { NodejsSkillComponent } from './skills/nodejs/nodejs-skill.component';
+import { ContactModule } from './contact/contact.module';
 import { AppTranslateLoader } from './app.translate.loader';
 
 const routes: Routes = [
@@ -28,7 +32,11 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'blog/:id', component: BlogDetailComponent },
-  { path: 'test-contact', component: TestContactComponent }
+  { path: 'test-contact', component: TestContactComponent },
+  { path: 'skills/technical/react', component: ReactSkillComponent },
+  { path: 'skills/technical/nodejs', component: NodejsSkillComponent },
+  { path: 'skills/technical/:skill', component: TechnicalSkillComponent },
+  { path: 'skills/human/:skill', component: TechnicalSkillComponent }
 ];
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -42,17 +50,17 @@ export function HttpLoaderFactory(http: HttpClient) {
     AboutComponent,
     SkillsComponent,
     ProjectsComponent,
-    ContactComponent,
-    TestContactComponent
+    ReactSkillComponent,
+    NodejsSkillComponent
   ],
   imports: [
     BrowserModule,
-    CommonModule,
     RouterModule.forRoot(routes),
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    CommonModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -61,7 +69,8 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     }),
     BlogComponent,
-    BlogDetailComponent
+    BlogDetailComponent,
+    ContactModule
   ],
   providers: [],
   bootstrap: [AppComponent]

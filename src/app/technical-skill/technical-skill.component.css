@@ -1,0 +1,34 @@
+.skill-content {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-description {
+  margin-bottom: 2rem;
+}
+
+.skill-features {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.skill-features h2 {
+  margin-bottom: 1rem;
+}
+
+.skill-features ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skill-features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.skill-features li:last-child {
+  border-bottom: none;
+}
