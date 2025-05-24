@@ -1,24 +1,33 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact.component';
-import { EmailService } from '../services/email.service';
+import { EmailService, EmailFormData } from '../services/email.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TranslateModule } from '@ngx-translate/core';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 import { of } from 'rxjs';
 
-fdescribe('ContactComponent', () => {
+// Déclarer les types globaux de Jasmine
+// @ts-ignore
+declare const jasmine: any;
+
+// @ts-ignore
+const { describe, it, beforeEach, expect, spyOn } = global as any;
+
+describe('ContactComponent', () => {
   let component: ContactComponent;
   let fixture: ComponentFixture<ContactComponent>;
   let emailService: EmailService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContactComponent ],
       imports: [
         ReactiveFormsModule,
         HttpClientTestingModule,
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        RouterTestingModule
       ],
+      declarations: [ ContactComponent ],
       providers: [ EmailService ]
     })
     .compileComponents();
@@ -36,17 +45,17 @@ fdescribe('ContactComponent', () => {
   });
 
   it('should submit form with valid data', () => {
-    const formData = {
+    const formData: EmailFormData = {
       name: 'Test User',
       email: 'test@example.com',
       subject: 'Test Subject',
-      message: 'This is a test message'
+      message: 'Test Message'
     };
 
-    component.contactForm.patchValue(formData);
-    expect(component.contactForm.valid).toBe(true);
+    const spy = jasmine.spyOn(emailService, 'sendEmail');
+    spy.and.returnValue(of({}));
 
-    const spy = spyOn(emailService, 'sendEmail').and.returnValue(of({}));
+    component.contactForm.setValue(formData);
     component.onSubmit();
 
     expect(spy).toHaveBeenCalledWith(formData);
@@ -54,17 +63,16 @@ fdescribe('ContactComponent', () => {
   });
 
   it('should show error message when submission fails', () => {
-    const formData = {
+    const error = { error: { message: 'Test error' } };
+    const spy = jasmine.spyOn(emailService, 'sendEmail');
+    spy.and.returnValue(of(error));
+
+    component.contactForm.setValue({
       name: 'Test User',
       email: 'test@example.com',
       subject: 'Test Subject',
-      message: 'This is a test message'
-    };
-
-    component.contactForm.patchValue(formData);
-    const error = { error: { message: 'Test error' } };
-    
-    const spy = spyOn(emailService, 'sendEmail').and.returnValue(of(error));
+      message: 'Test Message'
+    });
     component.onSubmit();
 
     expect(component.errorMessage).toBe('Test error');

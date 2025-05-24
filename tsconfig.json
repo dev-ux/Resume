@@ -22,7 +22,13 @@
       "ES2022",
       "DOM",
       "DOM.Iterable"
-    ]
+    ],
+    "types": [
+      "node",
+      "jasmine",
+      "jasminewd2"
+    ],
+    "allowSyntheticDefaultImports": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
