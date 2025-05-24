@@ -20,14 +20,47 @@
           </a>
         </li>
 
-        
+
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="skillsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="skillsDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
             <i class="fas fa-code"></i> {{ 'nav.skills' | translate }}
           </a>
           <ul class="dropdown-menu" aria-labelledby="skillsDropdown">
-            <li><a class="dropdown-item" routerLink="/skills/technical" routerLinkActive="active">{{ 'nav.technical_skills' | translate }}</a></li>
-            <li><a class="dropdown-item" routerLink="/skills/human" routerLinkActive="active">{{ 'nav.human_skills' | translate }}</a></li>
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                {{ 'nav.technical_skills' | translate }}
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/skills/technical/react" routerLinkActive="active">{{
+                    'nav.tech_skills.react' | translate }}</a></li>
+                <li><a class="dropdown-item" routerLink="/skills/technical/nodejs" routerLinkActive="active">{{
+                    'nav.tech_skills.nodejs' | translate }}</a></li>
+                <li><a class="dropdown-item" routerLink="/skills/technical/mongodb" routerLinkActive="active">{{
+                    'nav.tech_skills.mongodb' | translate }}</a></li>
+                <li><a class="dropdown-item" routerLink="/skills/technical/java" routerLinkActive="active">{{
+                    'nav.tech_skills.java' | translate }}</a></li>
+                <li><a class="dropdown-item" routerLink="/skills/technical/sql" routerLinkActive="active">{{
+                    'nav.tech_skills.sql' | translate }}</a></li>
+                <li><a class="dropdown-item" routerLink="/skills/technical/php" routerLinkActive="active">{{
+                    'nav.tech_skills.php' | translate }}</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                {{ 'nav.human_skills1' | translate }}
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/skills/human/project-management" routerLinkActive="active">{{
+                    'nav.human_skills.project-management' | translate }}</a></li>
+                <li><a class="dropdown-item" routerLink="/skills/human/agile" routerLinkActive="active">{{
+                    'nav.human_skills.agile' | translate }}</a></li>
+                <li><a class="dropdown-item" routerLink="/skills/human/client-relation" routerLinkActive="active">{{
+                    'nav.human_skills.client-relation' | translate }}</a></li>
+                <li><a class="dropdown-item" routerLink="/skills/human/communication" routerLinkActive="active">{{
+                    'nav.human_skills.communication' | translate }}</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
 
@@ -73,7 +106,7 @@
   <router-outlet></router-outlet>
 </div>
 
-<footer class="footer" >
+<footer class="footer">
   <div class="container">
     <div class="footer-content">
       <div class="footer-brand">

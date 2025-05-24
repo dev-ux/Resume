@@ -46,7 +46,21 @@
     "about": "À propos",
     "skills": "Compétences",
     "technical_skills": "Compétences techniques",
+    "tech_skills": {
+      "react": "React.js",
+      "nodejs": "Node.js",
+      "mongodb": "MongoDB",
+      "java": "Java",
+      "sql": "SQL",
+      "php": "PHP"
+    },
     "human_skills": "Compétences humaines",
+    "human_skills": {
+      "project-management": "Gestion de projet",
+      "agile": "Agile",
+      "client-relation": "Relation client",
+      "communication": "Communication"
+    },
     "projects": "Projets",
     "contact": "Contact",
     "blog": "Blog"

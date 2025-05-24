@@ -4,7 +4,20 @@
     "about": "About",
     "skills": "Skills",
     "technical_skills": "Technical Skills",
-    "human_skills": "Human Skills",
+    "tech_skills": {
+      "react": "React.js",
+      "nodejs": "Node.js",
+      "mongodb": "MongoDB",
+      "java": "Java",
+      "sql": "SQL",
+      "php": "PHP"
+    },
+    "human_skills": {
+      "project-management": "Project Management",
+      "agile": "Agile",
+      "client-relation": "Client Relation",
+      "communication": "Communication"
+    },
     "blog": "Blog",
     "contact": "Contact"
   },

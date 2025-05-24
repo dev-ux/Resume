@@ -14,6 +14,23 @@ body {
   line-height: 1.6;
 }
 
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+.dropdown-submenu > a:after {
+  content: "\f105";
+  float: right;
+  margin-right: -10px;
+  font-family: FontAwesome;
+}
+
 .hero {
   padding: 80px 0;
   margin-top: 100px;
@@ -23,4 +40,3 @@ body {
   display: flex;
   align-items: center;
 }
-
