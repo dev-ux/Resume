@@ -37,6 +37,17 @@ export class SkillsService {
       category: 'frontend',
       projects: []
     },
+    // Human Skills
+    {
+      name: 'Client-relation',
+      category: 'human',
+      projects: ['Altara GTA V Server']
+    },
+    {
+      name: 'Communication',
+      category: 'human',
+      projects: ['Altara GTA V Server']
+    },
     // Backend Skills
     {
       name: 'Node.js',

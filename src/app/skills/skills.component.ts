@@ -8,11 +8,12 @@ import { ProjectsService } from '../services/projects.service';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-  categories = ['frontend', 'backend', 'tools'];
+  categories = ['frontend', 'backend', 'tools', 'human'];
   categoryNames = {
     frontend: 'Frontend',
     backend: 'Backend',
-    tools: 'Tools & Technologies'
+    tools: 'Tools & Technologies',
+    human: 'Human Skills'
   };
 
   constructor(

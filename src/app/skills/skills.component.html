@@ -5,7 +5,8 @@
       <div class="skill-category" *ngFor="let category of categories">
         <h3>{{ category === 'frontend' ? categoryNames.frontend : 
               category === 'backend' ? categoryNames.backend : 
-              categoryNames.tools }}</h3>
+              category === 'tools' ? categoryNames.tools : 
+              categoryNames.human }}</h3>
         <ul>
           <li *ngFor="let skill of getSkillsByCategory(category)">
             {{ skill.name }}
