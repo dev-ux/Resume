@@ -28,7 +28,7 @@ import { TechnicalSkillComponent } from './technical-skill/technical-skill.compo
 import { ContactModule } from './contact/contact.module';
 
 import { AppTranslateLoader } from './app.translate.loader';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module'; // Ensure correct module path
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
