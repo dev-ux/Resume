@@ -54,8 +54,8 @@
       "sql": "SQL",
       "php": "PHP"
     },
-    "human_skills": "Compétences humaines",
-    "human_skills": {
+    "human_skills1": "Compétences humaines",
+    "human_skills2": {
       "project-management": "Gestion de projet",
       "agile": "Agile",
       "client-relation": "Relation client",

@@ -11,8 +11,9 @@
       "java": "Java",
       "sql": "SQL",
       "php": "PHP"
-    },
-    "human_skills": {
+    },    
+    "human_skills1": "Human Skills",
+    "human_skills2": {
       "project-management": "Project Management",
       "agile": "Agile",
       "client-relation": "Client Relation",
