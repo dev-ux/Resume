@@ -21,6 +21,10 @@ import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
 import { TechnicalSkillComponent } from './technical-skill/technical-skill.component';
 import { ReactSkillComponent } from './skills/react/react-skill.component';
 import { NodejsSkillComponent } from './skills/nodejs/nodejs-skill.component';
+import { MongodbSkillComponent } from './skills/mongodb/mongodb-skill.component';
+import { PhpSkillComponent } from './skills/php/php-skill.component';
+import { JavaSkillComponent } from './skills/java/java-skill.component';
+import { SqlSkillComponent } from './skills/sql/sql-skill.component';
 import { ContactModule } from './contact/contact.module';
 import { AppTranslateLoader } from './app.translate.loader';
 
@@ -35,6 +39,10 @@ const routes: Routes = [
   { path: 'test-contact', component: TestContactComponent },
   { path: 'skills/technical/react', component: ReactSkillComponent },
   { path: 'skills/technical/nodejs', component: NodejsSkillComponent },
+  { path: 'skills/technical/mongodb', component: MongodbSkillComponent },
+  { path: 'skills/technical/php', component: PhpSkillComponent },
+  { path: 'skills/technical/java', component: JavaSkillComponent },
+  { path: 'skills/technical/sql', component: SqlSkillComponent },
   { path: 'skills/technical/:skill', component: TechnicalSkillComponent },
   { path: 'skills/human/:skill', component: TechnicalSkillComponent }
 ];
@@ -51,7 +59,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     SkillsComponent,
     ProjectsComponent,
     ReactSkillComponent,
-    NodejsSkillComponent
+    NodejsSkillComponent,
+    MongodbSkillComponent,
+    PhpSkillComponent,
+    JavaSkillComponent,
+    SqlSkillComponent
   ],
   imports: [
     BrowserModule,
