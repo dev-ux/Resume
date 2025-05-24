@@ -19,11 +19,18 @@
             <i class="fas fa-user"></i> {{ 'nav.about' | translate }}
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/skills" routerLinkActive="active">
+
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="skillsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fas fa-code"></i> {{ 'nav.skills' | translate }}
           </a>
+          <ul class="dropdown-menu" aria-labelledby="skillsDropdown">
+            <li><a class="dropdown-item" routerLink="/skills/technical" routerLinkActive="active">{{ 'nav.technical_skills' | translate }}</a></li>
+            <li><a class="dropdown-item" routerLink="/skills/human" routerLinkActive="active">{{ 'nav.human_skills' | translate }}</a></li>
+          </ul>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" routerLink="/blog" routerLinkActive="active">
             <i class="fas fa-blog"></i> {{ 'nav.blog' | translate }}

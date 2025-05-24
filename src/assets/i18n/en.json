@@ -1,22 +1,179 @@
 {
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "technical_skills": "Technical Skills",
+    "human_skills": "Human Skills",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
   "home1": {
     "welcome": "Welcome to my portfolio",
     "title": "Kassi Marvin",
     "role": "Full Stack Developer",
-    "my_home_presentation_l1": "I am KASSI MARVIN CLÉMENT JUNIOR, a Full-Stack Developer specializing in Angular, React Native/JS (interfaces dynamiques et responsives); Spring Boot (Java), Symfony (PHP), architectures RESTful et microservices; Git (GitHub/Bitbucket), CI/CD, méthodes Agile) et Big Data.",
-    "my_home_presentation_l2": "Currently pursuing my degree at",
-    "my_function": "Full Stack Developer",
-    "school_igm": "ISCOD",
-    "work_info": "and working as an apprentice at",
-    "my_home_presentation_l3": "a structural consultancy",
-    "my_home_presentation_l4": "invested in technology and innovation",
-    "my_home_presentation_l5": "The future belongs to those who believe in the beauty of their dreams.",
-    "presentation": "Welcome to my portfolio",
-    "description": "5th Year Software Engineering Student at ISCOD | Wisetech-eng Apprentice",
-    "skills": "Skills",
-    "projects": "Projects",
-    "contact": "Contact",
-    "loading": "Loading projects..."
+    "my_home_presentation_l1": "I am KASSI MARVIN CLÉMENT JUNIOR, Full Stack Developer (Angular, React Native/JS (dynamic and responsive interfaces); Spring Boot (Java), Symfony (PHP), RESTful and microservices architectures; Git (GitHub/Bitbucket), CI/CD, Agile methods) and Big Data.",
+    "my_home_presentation_l2": "Currently in training at",
+    "school_igm": "IGM",
+    "work_info": "and working at",
+    "my_home_presentation_l3": "I am passionate about",
+    "my_home_presentation_l4": "and I am constantly seeking to improve my skills in these areas.",
+    "about": {
+      "title": "About Me",
+      "subtitle": "Full Stack Developer",
+      "description": "I am a passionate and dedicated Full Stack Developer with expertise in modern web technologies. I specialize in creating responsive and user-friendly applications using Angular, React Native, and other cutting-edge frameworks.",
+      "education": {
+        "title": "Education",
+        "ism": {
+          "title": "ISM",
+          "degree": "Master's Degree in Computer Science",
+          "major": "Software Engineering",
+          "year": "2017 - 2019"
+        },
+        "iscod": {
+          "title": "ISCOD",
+          "degree": "Master's Degree in Computer Science",
+          "major": "Full Stack Development",
+          "year": "2020 - 2022"
+        }
+      },
+      "experience": {
+        "title": "Professional Experience",
+        "wisetech": {
+          "title": "Wisetech-Eng",
+          "position": "Full Stack Developer",
+          "year": "2022 - Present",
+          "description": "Developing and maintaining web applications using modern technologies. Working on both frontend and backend development, implementing new features, and optimizing existing codebase."
+        }
+      },
+      "skills": {
+        "title": "Technical Skills",
+        "frontend": {
+          "title": "Frontend Development",
+          "skills": [
+            "Angular",
+            "React Native",
+            "JavaScript",
+            "TypeScript",
+            "CSS3",
+            "HTML5"
+          ]
+        },
+        "backend": {
+          "title": "Backend Development",
+          "skills": [
+            "Spring Boot",
+            "Java",
+            "PHP",
+            "Symfony",
+            "REST APIs"
+          ]
+        },
+        "tools": {
+          "title": "Development Tools",
+          "skills": [
+            "Git",
+            "GitHub",
+            "Bitbucket",
+            "Docker",
+            "CI/CD Pipelines"
+          ]
+        }
+      },
+      "languages": {
+        "title": "Languages",
+        "languages": [
+          {
+            "name": "French",
+            "level": "Native"
+          },
+          {
+            "name": "English",
+            "level": "Fluent"
+          }
+        ]
+      }
+    },
+    "skills": {
+      "title": "Technical Skills",
+      "subtitle": "My Expertise",
+      "frontend": {
+        "title": "Frontend Development",
+        "description": "I specialize in creating responsive and user-friendly web interfaces using modern frontend technologies.",
+        "skills": [
+          "Angular",
+          "React Native",
+          "JavaScript",
+          "TypeScript",
+          "CSS3",
+          "HTML5"
+        ]
+      },
+      "backend": {
+        "title": "Backend Development",
+        "description": "I have extensive experience in building robust backend systems using various technologies.",
+        "skills": [
+          "Spring Boot",
+          "Java",
+          "PHP",
+          "Symfony",
+          "REST APIs"
+        ]
+      },
+      "tools": {
+        "title": "Development Tools",
+        "description": "I am proficient in using modern development tools and methodologies.",
+        "skills": [
+          "Git",
+          "GitHub",
+          "Bitbucket",
+          "Docker",
+          "CI/CD Pipelines"
+        ]
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "subtitle": "My Work",
+      "projects": [
+        {
+          "title": "Project 1",
+          "description": "Description of project 1",
+          "technologies": ["Angular", "Spring Boot", "MySQL"]
+        },
+        {
+          "title": "Project 2",
+          "description": "Description of project 2",
+          "technologies": ["React", "Node.js", "MongoDB"]
+        }
+      ]
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "My Thoughts",
+      "posts": [
+        {
+          "title": "Post 1",
+          "date": "May 1, 2023",
+          "excerpt": "Excerpt of post 1"
+        },
+        {
+          "title": "Post 2",
+          "date": "April 15, 2023",
+          "excerpt": "Excerpt of post 2"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact Me",
+      "subtitle": "Get in Touch",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "submit": "Send Message"
+      }
+    }
   },
   "contact": {
     "title": "Contact Me",
@@ -39,14 +196,6 @@
       "phone": "+123 456 7890",
       "location": "Your City, Country"
     }
-  },
-  "nav": {
-    "home": "Home",
-    "about": "About",
-    "skills": "Skills",
-    "projects": "Projects",
-    "contact": "Contact",
-    "blog": "Blog"
   },
   "about": {
     "aboutme1": "I am a passionate software engineer with a strong foundation in full-stack development. Currently pursuing my final year at ISCOD, I'm gaining valuable industry experience through my apprenticeship at Wisetech-eng.",
