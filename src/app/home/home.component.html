@@ -1,6 +1,6 @@
 
 <section class="hero" style="margin-top: 200px;">
-  <div class="hero-content" [@fadeIn]>
+  <div class="hero-content" [@fadeIn]="">
     <div class="hero-profile">
       <div class="profile-photo">
         <img src="../../assets/images/pict.jpg" alt="{{name}}" class="rounded-image" />
@@ -10,16 +10,13 @@
         <h2>{{role}}</h2>
         <p>{{description}}</p>
         <p class="intro">
-          {{ 'home1.my_home_presentation_l1' | translate }} <br /> 
-          {{ 'home1.my_home_presentation_l2' | translate }} 
-          <a href="https://www.iscod.fr/" style="color: #fff;">{{ 'home1.school_igm' | translate }}</a>,
-          {{ 'home1.work_info' | translate }} <a href="https://www.wisetech-eng.com/" style="color: #fff;">Wisetech-Eng</a>,
-          {{ 'home1.my_home_presentation_l3' | translate }}
-          {{ 'home1.my_home_presentation_l4' | translate }}
+          Ingénieur en développement logiciel spécialisé en Angular, je suis actuellement en alternance chez Wisetech-Eng. <br /> 
+          Étudiant à l'ISCOD, je me spécialise dans le développement full-stack et je suis passionné par les nouvelles technologies. 
+          Je suis en constante recherche d'apprentissage et de projets innovants qui me permettent de mettre en pratique mes compétences.
         </p>
-        <div class="download-section btn btn-primary">
+        <div class="download-section">
           <button (click)="downloadCV()" class="btn btn-primary btn-round download-cv-btn">
-            <i class="fa fa-download"></i> Download CV
+            <i class="fa fa-download"></i> Télécharger CV
           </button>
         </div>
       </div>

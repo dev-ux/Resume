@@ -66,12 +66,29 @@
     "blog": "Blog"
   },
   "about": {
-    "aboutme1": "Je suis un ingénieur logiciel passionné, avec une solide expertise en développement full-stack. Actuellement en dernière année à l'ISCOD, j'acquiers une expérience industrielle concrète dans le cadre de mon alternance chez Wisetech-eng.",
-    "aboutme2": "Mon expertise technique repose sur le développement Angular, et je suis constamment à la recherche de nouveaux défis pour enrichir mes compétences et contribuer à des projets significatifs.",
-    "aboutme3": "Années d'expérience",
-    "aboutme4": "Projets terminés",
-    "aboutme5": "Technologies maîtrisées"
-  },
+    "title": "Présentation Générale",
+    "aboutme1": "Ingénieur humain conscient et responsable, je m'engage à créer des solutions technologiques qui ont un impact positif sur la société. Mon expertise se concentre sur le développement de logiciels robustes et éthiques qui améliorent la qualité de vie des utilisateurs.",
+    "aboutme2": "Mon projet professionnel est de devenir un leader dans le domaine de l'ingénierie humaine, en combinant les dernières technologies avec une approche centrée sur l'humain. Je souhaite contribuer à la création de solutions technologiques qui respectent l'environnement et favorisent l'inclusion sociale.",
+    "aboutme3": "Années d'expérience en développement",
+    "aboutme4": "Projets réalisés avec succès",
+    "aboutme5": "Technologies maîtrisées",
+    "values": {
+      "title": "Mes Valeurs",
+      "content": "- Intégrité et éthique dans le développement technologique\n- Innovation au service de l'humain\n- Développement durable et respect de l'environnement\n- Inclusion et diversité dans les équipes"
+    },
+    "professional": {
+      "title": "Projet Professionnel",
+      "content": "- Devenir un expert reconnu en ingénierie humaine\n- Créer des solutions technologiques qui ont un impact positif\n- Contribuer à la formation de développeurs éthiques\n- Participer à des projets à fort impact social"
+    },
+    "qualities": {
+      "title": "Qualités Humaines",
+      "content": "- Leadership et capacité à inspirer\n- Adaptabilité et résilience\n- Communication efficace\n- Sens de l'écoute et empathie"
+    },
+    "interests": {
+      "title": "Centres d'Intérêt",
+      "content": "- Développement durable et technologies vertes\n- Intelligence artificielle éthique\n- Innovation sociale\n- Formation et mentorat"
+    }
+  },  
   "skills": {
     "title": "Compétences"
   },
