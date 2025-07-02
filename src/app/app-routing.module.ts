@@ -5,6 +5,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ProjectDetailComponent } from './projects/project-detail.component';
+import { PortfolioComponent } from './projects/portfolio/portfolio.component';
+import { WisetechComponent } from './projects/wisetech/wisetech.component';
 import { ReactSkillComponent } from './skills/react/react-skill.component';
 import { NodejsSkillComponent } from './skills/nodejs/nodejs-skill.component';
 import { MongodbSkillComponent } from './skills/mongodb/mongodb-skill.component';
@@ -37,6 +40,19 @@ const routes: Routes = [
   { path: 'skills/technical/:skill', component: TechnicalSkillComponent },
   { path: 'skills/human/:skill', component: TechnicalSkillComponent },
   { path: 'projects', component: ProjectsComponent },
+  { path: 'projects/:id', component: ProjectDetailComponent },
+  { path: 'projects/resume', component: PortfolioComponent },
+  { path: 'projects/wisetech', component: WisetechComponent },
+  { path: 'wisetech', loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule) },
+  { path: 'projects/wisetech', loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule) },
+  { path: 'projects/marketplace', component: ProjectDetailComponent },
+  { path: 'projects/architecture', component: ProjectDetailComponent },
+  { path: 'projects/java-project', component: ProjectDetailComponent },
+  { path: 'projects/usecase', component: ProjectDetailComponent },
+  { path: 'projects/pmt-frontend', component: ProjectDetailComponent },
+  { path: 'projects/kunto', component: ProjectDetailComponent },
+  { path: 'projects/symfony', component: ProjectDetailComponent },
+  { path: 'projects/astro-ecommerce', component: ProjectDetailComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'blog/:id', component: BlogDetailComponent }
 ];

@@ -30,6 +30,15 @@
     ],
     "allowSyntheticDefaultImports": true
   },
+  "include": [
+    "src/**/*",
+    "test.ts"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts",
+    "src/**/*.e2e-spec.ts"
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

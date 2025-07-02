@@ -1,0 +1,113 @@
+<section class="hairgo-detail" style="margin-top: 200px; background-color: lightblue; border: 2px solid red;">
+  <div class="container">
+    <div class="back-button">
+      <a routerLink="/projects" class="btn btn-outline-primary">
+        <i class="fas fa-chevron-left"></i> Retour à la liste des projets
+      </a>
+    </div>
+
+    <div class="loading-container" *ngIf="loading">
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Chargement...</span>
+      </div>
+      <p>Chargement du projet HairGo...</p>
+    </div>
+
+    <div class="error-container" *ngIf="!loading && !project">
+      <div class="alert alert-danger">
+        <h4>Erreur</h4>
+        <p>Impossible de charger les détails du projet HairGo.</p>
+        <p>Veuillez réessayer plus tard ou contacter l'administrateur du site.</p>
+      </div>
+    </div>
+
+    <div class="hairgo-content" *ngIf="!loading && project">
+      <div class="hairgo-header">
+        <h1>{{ project.name }}</h1>
+        <div class="hairgo-subtitle">Projet professionnel - Développement mobile</div>
+        <div class="hairgo-tech-tags">
+          <span *ngFor="let tech of project.technologies" class="tech-tag">{{ tech }}</span>
+        </div>
+      </div>
+
+      <div class="hairgo-section">
+        <h3>Objectifs</h3>
+        <p>{{ project.objectives }}</p>
+      </div>
+
+      <div class="hairgo-section">
+        <h3>Enjeux</h3>
+        <p>{{ project.stakes }}</p>
+      </div>
+
+      <div class="hairgo-section">
+        <h3>Étapes de développement</h3>
+        <div class="steps-list">
+          <div class="step-item" *ngFor="let step of project.steps">
+            <h4>{{ step.title }}</h4>
+            <p><small>{{ step.date }}</small></p>
+            <p>{{ step.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hairgo-section">
+        <h3>Acteurs du projet</h3>
+        <div class="actors-grid">
+          <div class="actor-card" *ngFor="let actor of project.actors">
+            <h4>{{ actor.role }}</h4>
+            <p>{{ actor.description }}</p>
+            <div class="interactions" *ngIf="actor.interactions">
+              <h5>Interactions</h5>
+              <ul>
+                <li *ngFor="let interaction of actor.interactions">{{ interaction }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hairgo-section">
+        <h3>Résultats personnels</h3>
+        <ul>
+          <li *ngFor="let result of project.personalResults">{{ result }}</li>
+        </ul>
+      </div>
+
+      <div class="hairgo-section">
+        <h3>Résultats pour l'entreprise</h3>
+        <ul>
+          <li *ngFor="let result of project.companyResults">{{ result }}</li>
+        </ul>
+      </div>
+
+      <div class="hairgo-section">
+        <h3>Points forts</h3>
+        <ul>
+          <li *ngFor="let strength of project.strengths">{{ strength }}</li>
+        </ul>
+      </div>
+
+      <div class="hairgo-section">
+        <h3>Points d'amélioration</h3>
+        <ul>
+          <li *ngFor="let improvement of project.improvements">{{ improvement }}</li>
+        </ul>
+      </div>
+
+      <div class="hairgo-section" *ngIf="project.github || project.demo">
+        <h3>Liens utiles</h3>
+        <div class="links-grid">
+          <div class="link-item" *ngIf="project.github">
+            <h4>Code source</h4>
+            <a [href]="project.github" target="_blank" rel="noopener noreferrer">Lien vers GitHub</a>
+          </div>
+          <div class="link-item" *ngIf="project.demo">
+            <h4>Démonstration</h4>
+            <a [href]="project.demo" target="_blank" rel="noopener noreferrer">Voir la démo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

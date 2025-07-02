@@ -1,0 +1,194 @@
+<section class="wisetech-detail" style="margin-top: 150px;">
+  <div class="container">
+    <div class="back-button">
+      <a routerLink="/projets" class="btn btn-outline-primary">
+        <i class="fas fa-chevron-left"></i> Retour à la liste des projets
+      </a>
+    </div>
+
+    <div class="loading-container" *ngIf="loading">
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Chargement...</span>
+      </div>
+      <p>Chargement du projet Wisetech...</p>
+    </div>
+
+    <div class="error-container" *ngIf="!loading && !project">
+      <div class="alert alert-danger">
+        <h4>Erreur</h4>
+        <p>Impossible de charger les détails du projet Wisetech.</p>
+        <p>Veuillez réessayer plus tard ou contacter l'administrateur du site.</p>
+      </div>
+    </div>
+
+    <div class="wisetech-content" *ngIf="!loading && project">
+      <div class="wisetech-header">
+        <h1>{{ project.name }}</h1>
+        <div class="wisetech-subtitle">Projet professionnel - Alternance</div>
+        <div class="wisetech-tech-tags">
+          <span *ngFor="let tech of project.technologies" class="tech-tag">{{ tech }}</span>
+        </div>
+      </div>
+
+      <!-- Présentation et définition -->
+      <section class="wisetech-section">
+        <h2>Présentation</h2>
+        <div class="presentation-content">
+          <div class="description">
+            <h3>Description</h3>
+            <p>{{ project.description }}</p>
+          </div>
+          <div class="technologies" *ngIf="project.relatedSkills?.length">
+            <h3>Technologies utilisées</h3>
+            <div class="tech-list">
+              <span *ngFor="let tech of project.relatedSkills" class="tech-item">{{ tech }}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Objectifs, contexte, enjeux et risques -->
+      <section class="wisetech-section">
+        <h2>Objectifs et Contexte</h2>
+        <div class="objectives-content">
+          <div class="objectives-item" *ngIf="project.objectives">
+            <h3>Objectifs</h3>
+            <p>{{ project.objectives }}</p>
+          </div>
+          <div class="context-item" *ngIf="project.context">
+            <h3>Contexte</h3>
+            <p>{{ project.context }}</p>
+          </div>
+          <div class="stakes-item" *ngIf="project.stakes">
+            <h3>Enjeux</h3>
+            <p>{{ project.stakes }}</p>
+          </div>
+          <div class="risks-item" *ngIf="project.risks">
+            <h3>Risques</h3>
+            <p>{{ project.risks }}</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Étapes et actions -->
+      <section class="wisetech-section" *ngIf="project.steps?.length">
+        <h2>Étapes du projet</h2>
+        <div class="steps-timeline">
+          <div *ngFor="let step of project.steps" class="step-item">
+            <div class="step-header">
+              <h3>{{ step.title }}</h3>
+              <p class="step-date">{{ step.date }}</p>
+            </div>
+            <p>{{ step.description }}</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Acteurs et interactions -->
+      <section class="wisetech-section" *ngIf="project.actors?.length">
+        <h2>Acteurs et interactions</h2>
+        <div class="actors-grid">
+          <div *ngFor="let actor of project.actors" class="actor-card">
+            <h3>{{ actor.role }}</h3>
+            <p>{{ actor.description }}</p>
+            <div class="interactions" *ngIf="actor.interactions?.length">
+              <h4>Interactions</h4>
+              <ul>
+                <li *ngFor="let interaction of actor.interactions">{{ interaction }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Résultats -->
+      <section class="wisetech-section" *ngIf="project.personalResults?.length || project.companyResults?.length">
+        <h2>Résultats</h2>
+        <div class="results-grid">
+          <div class="results-item" *ngIf="project.personalResults?.length">
+            <h3>Résultats personnels</h3>
+            <ul>
+              <li *ngFor="let result of project.personalResults">{{ result }}</li>
+            </ul>
+          </div>
+          <div class="results-item" *ngIf="project.companyResults?.length">
+            <h3>Résultats pour l'entreprise</h3>
+            <ul>
+              <li *ngFor="let result of project.companyResults">{{ result }}</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lendemains du projet -->
+      <section class="wisetech-section" *ngIf="project.immediateFuture || project.longTerm || project.currentStatus">
+        <h2>Lendemains du projet</h2>
+        <div class="future-grid">
+          <div class="future-item" *ngIf="project.immediateFuture">
+            <h3>Futur immédiat</h3>
+            <p>{{ project.immediateFuture }}</p>
+          </div>
+          <div class="future-item" *ngIf="project.longTerm">
+            <h3>Long terme</h3>
+            <p>{{ project.longTerm }}</p>
+          </div>
+          <div class="future-item" *ngIf="project.currentStatus">
+            <h3>Statut actuel</h3>
+            <p>{{ project.currentStatus }}</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Regard critique -->
+      <section class="wisetech-section" *ngIf="project.strengths?.length || project.weaknesses?.length || project.improvements?.length">
+        <h2>Regard critique</h2>
+        <div class="critical-view">
+          <div class="strengths" *ngIf="project.strengths?.length">
+            <h3>Points forts</h3>
+            <ul>
+              <li *ngFor="let strength of project.strengths">{{ strength }}</li>
+            </ul>
+          </div>
+          <div class="weaknesses" *ngIf="project.weaknesses?.length">
+            <h3>Points faibles</h3>
+            <ul>
+              <li *ngFor="let weakness of project.weaknesses">{{ weakness }}</li>
+            </ul>
+          </div>
+          <div class="improvements" *ngIf="project.improvements?.length">
+            <h3>Améliorations possibles</h3>
+            <ul>
+              <li *ngFor="let improvement of project.improvements">{{ improvement }}</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Compétences liées -->
+      <section class="wisetech-section" *ngIf="getRelatedSkills().length > 0">
+        <h2>Compétences liées</h2>
+        <div class="skills-grid">
+          <div *ngFor="let skill of getRelatedSkills()" class="skill-card">
+            <h3>{{ skill.name }}</h3>
+            <a routerLink="{{'/skills/' + skill.category}}" class="skill-link">
+              Voir la compétence
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Liens utiles -->
+      <section class="wisetech-section" *ngIf="project.github || project.demo">
+        <h2>Liens utiles</h2>
+        <div class="links-grid">
+          <a *ngIf="project.github" [href]="project.github" target="_blank" class="project-link">
+            <fa-icon [icon]="['fab', 'github']"></fa-icon> Dépôt GitHub
+          </a>
+          <a *ngIf="project.demo" [href]="project.demo" target="_blank" class="project-link">
+            <fa-icon [icon]="['fas', 'external-link-alt']"></fa-icon> Démo en ligne
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

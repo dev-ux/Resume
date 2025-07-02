@@ -2,30 +2,287 @@
   "projects": [
     {
       "id": "resume",
-      "name": "Resume",
+      "name": "Portfolio en ligne",
       "description": "Mon portfolio et CV en ligne avec Angular",
       "technologies": ["Angular", "TypeScript", "HTML5", "CSS3", "Bootstrap"],
       "github": "https://github.com/dev-ux/Resume",
       "demo": "https://dev-ux.github.io/Resume/",
-      "image": "assets/images/projects/resume.png"
+      "image": "assets/images/projects/resume.png",
+      "objectives": "Créer un portfolio professionnel moderne et interactif qui met en valeur mes compétences techniques et mon expérience professionnelle.",
+      "context": "Projet de fin d'études visant à créer un portfolio professionnel pour présenter mes compétences et projets aux recruteurs et clients potentiels.",
+      "stakes": "Création d'une première impression positive et professionnelle, mise en valeur de mes compétences techniques et créativité.",
+      "risks": "Performance et compatibilité cross-browser, maintenance à long terme, évolution des technologies utilisées.",
+      "steps": [
+        {
+          "title": "Conception",
+          "date": "Jan 2024",
+          "description": "Définition de l'architecture et des fonctionnalités, choix du framework Angular pour une application moderne et performante."
+        },
+        {
+          "title": "Développement Frontend",
+          "date": "Fév 2024",
+          "description": "Implémentation des composants Angular, gestion des routes, integration des services pour les données dynamiques."
+        },
+        {
+          "title": "Tests et Optimisation",
+          "date": "Mars 2024",
+          "description": "Tests d'interface utilisateur, optimisation des performances, mise en place de la responsive design."
+        },
+        {
+          "title": "Déploiement",
+          "date": "Avril 2024",
+          "description": "Configuration du déploiement sur GitHub Pages, mise en place de la CI/CD."
+        }
+      ],
+      "actors": [
+        {
+          "role": "Développeur Fullstack",
+          "description": "Conception et développement de l'application, gestion du déploiement et maintenance.",
+          "interactions": [
+            "Collaboration avec les designers pour l'interface utilisateur",
+            "Tests utilisateurs pour l'expérience utilisateur",
+            "Maintenance et mise à jour régulière du contenu"
+          ]
+        }
+      ],
+      "personalResults": [
+        "Amélioration significative des compétences en Angular et TypeScript",
+        "Expérience en développement responsive",
+        "Mise en pratique des bonnes pratiques de développement",
+        "Création d'une vitrine professionnelle"
+      ],
+      "companyResults": [
+        "Site web professionnel et moderne",
+        "Présentation claire et structurée des compétences",
+        "Facilité de maintenance et mise à jour",
+        "Performance optimisée"
+      ],
+      "immediateFuture": "Ajout de nouvelles fonctionnalités et amélioration continue de l'expérience utilisateur.",
+      "longTerm": "Maintenance régulière et adaptation aux nouvelles technologies Angular.",
+      "currentStatus": "En production, maintenance continue.",
+      "strengths": [
+        "Design moderne et responsive",
+        "Performance optimisée",
+        "Code maintenable et bien documenté",
+        "Expérience utilisateur fluide"
+      ],
+      "weaknesses": [
+        "Certaines fonctionnalités à améliorer",
+        "Dépendance à certaines technologies externes"
+      ],
+      "improvements": [
+        "Ajout de fonctionnalités supplémentaires",
+        "Optimisation des performances",
+        "Amélioration de la sécurité",
+        "Ajout de nouvelles technologies"
+      ],
+      "relatedSkills": [
+        "Angular",
+        "TypeScript",
+        "Frontend",
+        "Git",
+        "Project Management"
+      ]
     },
     {
       "id": "wisetech",
-      "name": "Wisetech",
-      "description": "Projet de gestion de projet avec Angular et Spring Boot",
+      "name": "Wisetech - Site internet",
+      "description": "Refonte du site internet de l'entreprise Wisetech",
       "technologies": ["Angular", "Spring Boot", "Java", "MySQL"],
       "github": "https://github.com/dev-ux/wisetech",
       "demo": "https://dev-ux.github.io/wisetech/",
-      "image": "assets/images/projects/wisetech.png"
+      "image": "assets/images/projects/wisetech.png",
+      "objectives": "Refonte complète du site internet de l'entreprise Wisetech pour améliorer l'ergonomie et l'expérience utilisateur.",
+      "context": "Projet professionnel dans le cadre de mon alternance chez Wisetech. La refonte était nécessaire car le site précédent n'était pas ergonomique et ne répondait pas aux attentes des utilisateurs.",
+      "stakes": "Performance, sécurité des données, évolutivité pour supporter une croissance future.",
+      "risks": "Complexité de l'architecture, gestion des données sensibles, performance avec un grand nombre d'utilisateurs.",
+      "steps": [
+        {
+          "title": "Analyse des besoins",
+          "date": "Mars 2024",
+          "description": "Réunion avec les parties prenantes pour définir les fonctionnalités et les contraintes techniques."
+        },
+        {
+          "title": "Développement Backend",
+          "date": "Avril 2024",
+          "description": "Implémentation de l'API REST avec Spring Boot, mise en place de la base de données MySQL."
+        },
+        {
+          "title": "Développement Frontend",
+          "date": "Mai 2024",
+          "description": "Création des composants Angular, intégration avec l'API backend, mise en place de la sécurité."
+        },
+        {
+          "title": "Tests et déploiement",
+          "date": "Juin 2024",
+          "description": "Tests de performance, tests de sécurité, déploiement en production."
+        }
+      ],
+      "actors": [
+        {
+          "role": "Développeur Fullstack",
+          "description": "Développement de l'application complète, gestion de l'intégration frontend/backend.",
+          "interactions": [
+            "Collaboration avec l'équipe backend",
+            "Coordination avec les testeurs",
+            "Maintenance et support utilisateur"
+          ]
+        },
+        {
+          "role": "Chef de projet",
+          "description": "Gestion du projet, coordination des équipes, suivi de l'avancement.",
+          "interactions": [
+            "Gestion des ressources",
+            "Communication avec les parties prenantes",
+            "Suivi des livrables"
+          ]
+        }
+      ],
+      "personalResults": [
+        "Maîtrise approfondie de Spring Boot et Angular",
+        "Expérience en développement d'API REST",
+        "Compétences en gestion de projet",
+        "Amélioration des compétences en sécurité"
+      ],
+      "companyResults": [
+        "Application robuste et sécurisée",
+        "Solution évolutive pour la gestion de projets",
+        "Performance optimisée",
+        "Satisfaction des utilisateurs"
+      ],
+      "immediateFuture": "Ajout de nouvelles fonctionnalités et optimisation des performances.",
+      "longTerm": "Maintenance continue et adaptation aux besoins évoluant des utilisateurs.",
+      "currentStatus": "En production, maintenance continue.",
+      "strengths": [
+        "Architecture robuste et évolutive",
+        "Sécurité renforcée",
+        "Performance optimisée",
+        "Code maintenable"
+      ],
+      "weaknesses": [
+        "Complexité de l'architecture",
+        "Dépendance à certaines technologies",
+        "Maintenance à long terme"
+      ],
+      "improvements": [
+        "Ajout de nouvelles fonctionnalités",
+        "Optimisation des performances",
+        "Amélioration de la sécurité",
+        "Documentation plus complète"
+      ],
+      "relatedSkills": [
+        "Spring Boot",
+        "Angular",
+        "Backend",
+        "Project Management",
+        "Security"
+      ]
     },
     {
       "id": "hairgo",
-      "name": "HairGo",
-      "description": "Application de réservation de coiffeurs avec React Native",
-      "technologies": ["React Native", "Node.js", "MongoDB"],
+      "name": "HairGo - Application de services de beauté à la demande",
+      "description": "Application mobile pour la réservation de services de coiffure et de beauté à domicile ou en salon. Permet aux utilisateurs de réserver des services en temps réel et aux professionnels de gérer leurs réservations.",
+      "technologies": ["React Native", "Node.js", "MongoDB", "Stripe", "Firebase", "Google Maps API", "Push Notifications"],
       "github": "https://github.com/dev-ux/HairGo",
       "demo": "https://dev-ux.github.io/HairGo/",
-      "image": "assets/images/projects/hairgo.png"
+      "image": "assets/images/projects/hairgo.png",
+      "objectives": "Développer une plateforme mobile complète pour connecter les clients aux professionnels de la beauté, facilitant la réservation de services en temps réel.",
+      "context": "Développement d'une application mobile innovante qui révolutionne l'industrie de la beauté en permettant aux clients de réserver des services de coiffure et de beauté à la demande.",
+      "stakes": "Expérience utilisateur mobile fluide, performance optimale sur différents appareils, intégration sécurisée des paiements, système de géolocalisation précis.",
+      "risks": "Performance sur mobile, gestion des données sensibles (paiements), intégration avec différents prestataires de services, complexité de la géolocalisation en temps réel.",
+      "steps": [
+        {
+          "title": "Conception",
+          "date": "Juin 2024",
+          "description": "Définition de l'architecture complète de l'application, choix de React Native pour le développement cross-platform, intégration de la géolocalisation et des services de paiement."
+        },
+        {
+          "title": "Développement Frontend",
+          "date": "Juillet 2024",
+          "description": "Création des écrans principaux : connexion, inscription des coiffeurs, inscription des clients, interface de réservation avec carte interactive."
+        },
+        {
+          "title": "Développement Backend",
+          "date": "Août 2024",
+          "description": "Implémentation du système de gestion des transactions, intégration avec Stripe pour les paiements, gestion des disponibilités des coiffeurs."
+        },
+        {
+          "title": "Tests et Optimisation",
+          "date": "Septembre 2024",
+          "description": "Tests de la géolocalisation en temps réel, optimisation des performances, mise en place du système de notifications push."
+        },
+        {
+          "title": "Lancement",
+          "date": "Octobre 2024",
+          "description": "Déploiement sur Google Play Store, mise en place du système de gestion des coiffeurs et des clients, lancement de la campagne marketing."
+        }
+      ],
+      "actors": [
+        {
+          "role": "Développeur Mobile",
+          "description": "Développement de l'application mobile, intégration avec l'API backend.",
+          "interactions": [
+            "Collaboration avec les designers UI/UX",
+            "Tests utilisateurs sur mobile",
+            "Maintenance et support technique"
+          ]
+        },
+        {
+          "role": "Chef de produit",
+          "description": "Définition des fonctionnalités, coordination avec les salons de coiffure.",
+          "interactions": [
+            "Gestion des besoins des salons",
+            "Communication avec les utilisateurs",
+            "Suivi des KPIs"
+          ]
+        }
+      ],
+      "personalResults": [
+        "Maîtrise approfondie de React Native",
+        "Expérience en développement mobile cross-platform",
+        "Compétences en UI/UX mobile",
+        "Gestion de projet mobile"
+      ],
+      "companyResults": [
+        "Application mobile performante",
+        "Expérience utilisateur optimisée",
+        "Intégration avec les salons de coiffure",
+        "Satisfaction des utilisateurs"
+      ],
+      "immediateFuture": "Ajout de nouvelles fonctionnalités et amélioration de l'expérience utilisateur.",
+      "longTerm": "Développement de nouvelles fonctionnalités et expansion géographique.",
+      "currentStatus": "En production, maintenance continue.",
+      "strengths": [
+        "Design mobile optimisé",
+        "Performance sur mobile",
+        "Code maintenable",
+        "Expérience utilisateur fluide"
+      ],
+      "weaknesses": [
+        "Dépendance à certaines technologies mobiles",
+        "Maintenance à long terme",
+        "Intégration avec différents salons"
+      ],
+      "improvements": [
+        "Ajout de nouvelles fonctionnalités",
+        "Optimisation des performances",
+        "Amélioration de la sécurité",
+        "Expansion des fonctionnalités"
+      ],
+      "relatedSkills": [
+        "React Native",
+        "Node.js",
+        "MongoDB",
+        "Stripe",
+        "Firebase",
+        "Google Maps API",
+        "Push Notifications",
+        "Project Management",
+        "Beauty Industry",
+        "Mobile Development",
+        "Geolocation",
+        "Real-time Systems"
+      ]
     },
     {
       "id": "marketplace",
@@ -39,8 +296,8 @@
     {
       "id": "architecture",
       "name": "Architecture Logicielle",
-      "description": "Études et implémentations d'architectures logicielles",
-      "technologies": ["Java", "Spring Boot", "Docker", "Kubernetes"],
+      "description": "Conception d'une architecture logicielle basée sur les microservices pour le monitoring en temps réel des machines d’une usine textile réparties par catégorie (Préparation, Réalisation, Vérification).",
+      "technologies": ["Java", "Spring Boot", "Kafka", "WebSocket", "Docker", "Kubernetes"],
       "github": "https://github.com/dev-ux/Architecture_logicielle",
       "image": "assets/images/projects/architecture.png"
     },

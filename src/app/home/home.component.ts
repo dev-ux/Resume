@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { TranslateService } from '@ngx-translate/core';
 import { FileDownloadService } from '../services/file-download.service';
 import { saveAs } from 'file-saver';
 
@@ -40,36 +39,19 @@ interface Skill {
   ]
 })
 export class HomeComponent implements OnInit {
-  public name: string = 'Kassi Marvin';
-  public role: string = 'Full Stack Developer';
-  public description: string | undefined;
-  public projects: Project[] = [];
-  public skills: Skill[] = [];
+  name = 'Kassi Marvin';
+  role = 'Ingénieur en développement logiciel';
+  description = 'Spécialisé en Angular et en développement full-stack';
+  loading = true;
+  skills: Skill[] = [];
+  projects: Project[] = [];
 
   constructor(
-    private translate: TranslateService,
     private fileDownloadService: FileDownloadService
-  ) {
-    // Set default language
-    translate.setDefaultLang('en');
-    // Use browser language if available
-    const browserLang = translate.getBrowserLang();
-    translate.use(browserLang?.match(/en|fr/) ? browserLang : 'en');
-    
-    this.initializeData();
-  }
+  ) { }
 
   ngOnInit(): void {
-    // Initialize translations
-    this.translate.get('home.description').subscribe((res: string) => {
-      this.description = res;
-    });
-
-    // Get all translations
-    this.translate.get('home').subscribe((translations: any) => {
-      this.description = translations.description;
-      // You can add more translations here if needed
-    });
+    this.initializeData();
   }
 
   downloadCV(): void {
@@ -84,100 +66,116 @@ export class HomeComponent implements OnInit {
   }
 
   initializeData(): void {
+    this.skills = [
+      {
+        category: 'Web Development',
+        items: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Angular', 'React', 'Node.js', 'Express.js']
+      },
+      {
+        category: 'Backend & APIs',
+        items: ['Java', 'Spring Boot', 'Python', 'Flask', 'RESTful APIs', 'GraphQL']
+      },
+      {
+        category: 'Mobile Development',
+        items: ['Swift', 'Kotlin', 'React Native', 'Flutter']
+      },
+      {
+        category: 'Database',
+        items: ['MySQL', 'PostgreSQL', 'MongoDB', 'Firebase']
+      },
+      {
+        category: 'DevOps & Tools',
+        items: ['Docker', 'Kubernetes', 'AWS', 'Git', 'Jenkins']
+      },
+      {
+        category: 'Cloud & Infrastructure',
+        items: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes']
+      },
+      {
+        category: 'Testing & CI/CD',
+        items: ['Jest', 'Mocha', 'Chai', 'Jenkins', 'GitHub Actions']
+      },
+      {
+        category: 'Design & UX',
+        items: ['Figma', 'Adobe XD', 'Material Design', 'Responsive Design']
+      }
+    ];
+
     this.projects = [
       {
         name: 'Snake',
-        description: 'snake_description',
-        short_description: 'snake_shorte_description',
+        description: 'Jeu Snake implémenté en Python avec upemtk',
+        short_description: 'Jeu Snake classique',
         source_file: '',
         picture: 'assets/img/projects/snake.jfif',
         programingLangage: 'Python;upemtk',
         category: 'Game Development',
         features: [
-          'Smooth graphics implementation',
-          'Intuitive controls',
-          'Score tracking',
-          'Responsive gameplay'
+          'Graphismes fluides',
+          'Contrôles intuitifs',
+          'Système de score',
+          'Jeu réactif'
         ],
         technologies: [
-          { name: 'Python', level: 'Advanced' },
-          { name: 'upemtk', level: 'Intermediate' }
+          { name: 'Python', level: 'Avancé' },
+          { name: 'upemtk', level: 'Intermédiaire' }
         ]
       },
       {
         name: 'Game Of Stools',
-        description: 'GameOfStools_description',
-        short_description: 'GameOfStools_short_description',
+        description: 'Jeu de stratégie en C avec MLV',
+        short_description: 'Jeu de stratégie multijoueur',
         source_file: '',
         picture: 'assets/img/projects/GameOfStool.png',
-        programingLangage: 'Langace C;MLV-2.0.2',
+        programingLangage: 'C;MLV-2.0.2',
         category: 'Game Development',
         features: [
-          'Strategic gameplay',
-          'MLV graphics integration',
-          'Multiplayer support',
-          'AI opponent'
+          'Jeu stratégique',
+          'Intégration graphique MLV',
+          'Support multijoueur',
+          'IA adverse'
         ],
         technologies: [
-          { name: 'C', level: 'Advanced' },
-          { name: 'MLV-2.0.2', level: 'Advanced' }
+          { name: 'C', level: 'Avancé' },
+          { name: 'MLV-2.0.2', level: 'Avancé' }
         ]
       },
       {
         name: 'Shoot\'em Up',
-        description: 'ShootemUp_description',
-        short_description: 'ShootemUp_Short_description',
+        description: 'Jeu d\'action en C avec MLV',
+        short_description: 'Jeu d\'action rapide',
         source_file: '',
         picture: 'assets/img/projects/shot_emup.png',
-        programingLangage: 'Langace C;MLV-2.0.2',
+        programingLangage: 'C;MLV-2.0.2',
         category: 'Game Development',
         features: [
-          'Fast-paced action',
-          'Multiple enemies',
-          'Power-ups system',
-          'Score system'
+          'Action rapide',
+          'Multiples ennemis',
+          'Système de power-ups',
+          'Système de score'
         ],
         technologies: [
-          { name: 'C', level: 'Advanced' },
-          { name: 'MLV-2.0.2', level: 'Advanced' }
+          { name: 'C', level: 'Avancé' },
+          { name: 'MLV-2.0.2', level: 'Avancé' }
         ]
       },
       {
         name: 'Hanabi',
-        description: 'Hanabi_description',
-        short_description: 'Hanabi_Short_description',
+        description: 'Jeu de cartes Hanabi en Java',
+        short_description: 'Jeu de cartes coopératif',
         source_file: '',
         picture: 'assets/img/projects/Hanabi.png',
         programingLangage: 'Java;Eclipse',
         category: 'Game Development',
         features: [
-          'Cooperative gameplay',
-          'Card management system',
-          'Turn-based mechanics',
-          'Score tracking'
+          'Action rapide',
+          'Multiples ennemis',
+          'Système de power-ups',
+          'Système de score'
         ],
         technologies: [
-          { name: 'Java', level: 'Advanced' },
-          { name: 'Eclipse', level: 'Advanced' }
-        ]
-      },
-      {
-        name: 'ChatOs',
-        description: 'ChatOs_description',
-        short_description: 'ChatOs_Short_description',
-        source_file: '',
-        picture: 'assets/img/projects/chatos.png',
-        programingLangage: 'Java;Eclipse',
-        category: 'Software Development',
-        features: [
-          'Real-time messaging',
-          'User management',
-          'Message history',
-          'File sharing'
-        ],
-        technologies: [
-          { name: 'Java', level: 'Advanced' },
-          { name: 'Eclipse', level: 'Advanced' }
+          { name: 'Java', level: 'Avancé' },
+          { name: 'Eclipse', level: 'Avancé' }
         ]
       },
       {

@@ -1,0 +1,35 @@
+<section class="usecase-detail" style="margin-top: 150px;">
+  <div class="container">
+    <div class="back-button">
+      <a routerLink="/projects" class="btn btn-outline-primary">
+        <fa-icon [icon]="['fas', 'arrow-left']"></fa-icon> Retour à tous les projets
+      </a>
+    </div>
+
+    <div *ngIf="!project" class="loading">
+      <p>Chargement des détails du projet...</p>
+    </div>
+
+    <div *ngIf="project" class="project-content">
+      <div class="project-header">
+        <h1>{{ project.name }}</h1>
+        <div class="project-subtitle">Projet UseCase</div>
+        <div class="project-tech-tags">
+          <span *ngFor="let tech of project.programingLangage.split(';')" class="tech-tag">{{ tech }}</span>
+        </div>
+      </div>
+
+      <section class="project-section">
+        <h2>Description</h2>
+        <p>{{ project.description }}</p>
+      </section>
+
+      <section class="project-section">
+        <h2>Technologies utilisées</h2>
+        <div class="tech-list">
+          <span *ngFor="let tech of project.programingLangage.split(';')" class="tech-item">{{ tech }}</span>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

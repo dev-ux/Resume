@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
-import { ProjectsComponent } from './projects/projects.component';
+import { ProjectsModule } from './projects/projects.module';
 import { ReactSkillComponent } from './skills/react/react-skill.component';
 import { NodejsSkillComponent } from './skills/nodejs/nodejs-skill.component';
 import { MongodbSkillComponent } from './skills/mongodb/mongodb-skill.component';
@@ -34,7 +34,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'skills', component: SkillsComponent },
-  { path: 'projects', component: ProjectsComponent }
+  { path: 'projects', loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule) }
 ];
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -47,7 +47,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     AboutComponent,
     SkillsComponent,
-    ProjectsComponent,
     ReactSkillComponent,
     NodejsSkillComponent,
     MongodbSkillComponent,
@@ -61,7 +60,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     TechnicalSkillComponent
   ],
   imports: [
-    BrowserModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,

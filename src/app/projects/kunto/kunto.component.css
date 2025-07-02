@@ -1,0 +1,6 @@
+@import '../architecture/architecture.component.css';
+
+.kunto-detail {
+  padding: 2rem 0;
+  margin-top: 150px;
+}

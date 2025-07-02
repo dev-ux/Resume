@@ -1,0 +1,6 @@
+@import '../architecture/architecture.component.css';
+
+.java-project-detail {
+  padding: 2rem 0;
+  margin-top: 200px;
+}

@@ -1,0 +1,20 @@
+<section class="java-project-detail">
+  <div class="container">
+    <div class="back-button">
+      <a routerLink="/projects" class="btn btn-outline-primary">
+        <fa-icon [icon]="['fas', 'arrow-left']"></fa-icon> Retour à tous les projets
+      </a>
+    </div>
+
+    <div *ngIf="loading" class="loading">
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Chargement...</span>
+      </div>
+      <p>Chargement du projet...</p>
+    </div>
+
+    <div *ngIf="!loading && project" class="project-content">
+      <app-project-detail [project]="project"></app-project-detail>
+    </div>
+  </div>
+</section>

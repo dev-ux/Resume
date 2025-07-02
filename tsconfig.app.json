@@ -5,10 +5,16 @@
     "types": []
   },
   "files": [
-    "src/main.ts",
-    "src/polyfills.ts"
+    "src/main.ts"
   ],
   "include": [
     "src/**/*.ts"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts",
+    "src/**/*.e2e-spec.ts",
+    "src/blog/blog.module.ts",
+    "src/services/translate.service.ts"
   ]
 }

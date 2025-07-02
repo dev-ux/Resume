@@ -1,23 +1,81 @@
 <section class="skills">
   <div class="container">
     <h2>{{ 'skills.title' | translate }}</h2>
-    <div class="skills-grid">
-      <div class="skill-category" *ngFor="let category of categories">
-        <h3>{{ category === 'frontend' ? categoryNames.frontend : 
-              category === 'backend' ? categoryNames.backend : 
-              category === 'tools' ? categoryNames.tools : 
-              categoryNames.human }}</h3>
-        <ul>
-          <li *ngFor="let skill of getSkillsByCategory(category)">
-            {{ skill.name }}
-            <div class="projects-used" *ngIf="skill.projects.length > 0">
-              <span class="badge" *ngFor="let project of skill.projects">
-                {{ project }}
-              </span>
+    
+    <!-- Main Skills Navigation -->
+    <div class="skills-categories">
+      <nav>
+        <a *ngFor="let category of categories" 
+           [routerLink]="['/skills', category]" 
+           class="category-link" 
+           [class.active]="currentCategory === category">
+          {{ category === 'frontend' ? categoryNames.frontend : 
+            category === 'backend' ? categoryNames.backend : 
+            category === 'tools' ? categoryNames.tools : 
+            categoryNames.human }}</a>
+      </nav>
+    </div>
+
+    <!-- Skills Articles -->
+    <div class="skills-articles">
+      <article *ngFor="let skill of getSkillsByCategory(currentCategory)" class="skill-article">
+        <h3>{{ skill.name }}</h3>
+        
+        <!-- Definition -->
+        <section class="definition">
+          <h4>Définition</h4>
+          <p>{{ skill.definition }}</p>
+        </section>
+
+        <!-- Proof Points -->
+        <section class="proof-points">
+          <h4>Éléments de preuve</h4>
+          <div class="anecdotes">
+            <div class="anecdote" *ngFor="let anecdote of skill.anecdotes">
+              <h5>{{ anecdote.title }}</h5>
+              <p>{{ anecdote.description }}</p>
+              <p class="result">{{ anecdote.result }}</p>
+              <p class="value-add">{{ anecdote.valueAdd }}</p>
+              <a [routerLink]="['/projects', anecdote.projectId]" class="project-link">
+                Voir le projet: {{ anecdote.projectName }}
+              </a>
             </div>
-          </li>
-        </ul>
-      </div>
+          </div>
+        </section>
+
+        <!-- Self-Critique -->
+        <section class="self-critique">
+          <h4>Auto-critique</h4>
+          <p>{{ skill.critique }}</p>
+          <ul>
+            <li *ngIf="skill.masteryLevel">Niveau de maîtrise: {{ skill.masteryLevel }}</li>
+            <li *ngIf="skill.priority">Priorité: {{ skill.priority }}</li>
+            <li *ngIf="skill.acquisitionSpeed">Vitesse d'acquisition: {{ skill.acquisitionSpeed }}</li>
+            <li *ngIf="skill.advice">Conseils: {{ skill.advice }}</li>
+          </ul>
+        </section>
+
+        <!-- Evolution -->
+        <section class="evolution">
+          <h4>Évolution</h4>
+          <p>{{ skill.evolution }}</p>
+          <ul>
+            <li *ngIf="skill.currentLevel">Niveau actuel: {{ skill.currentLevel }}</li>
+            <li *ngIf="skill.targetLevel">Objectif: {{ skill.targetLevel }}</li>
+            <li *ngIf="skill.formations">Formations en cours: {{ skill.formations }}</li>
+          </ul>
+        </section>
+
+        <!-- Related Projects -->
+        <section class="related-projects">
+          <h4>Réalisations associées</h4>
+          <ul>
+            <li *ngFor="let project of skill.projects">
+              <a [routerLink]="['/projects', project.id]">{{ project.name }}</a>
+            </li>
+          </ul>
+        </section>
+      </article>
     </div>
   </div>
 </section>

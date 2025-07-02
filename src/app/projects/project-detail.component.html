@@ -1,0 +1,187 @@
+<section class="project-detail mt-150">
+  <div class="container">
+    <div class="back-button">
+      <a routerLink="/projects" class="btn btn-outline-primary">
+        <fa-icon [icon]="['fas', 'arrow-left']"></fa-icon> Retour à tous les projets
+      </a>
+    </div>
+
+    <div *ngIf="loading" class="loading">
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Chargement...</span>
+      </div>
+      <p>Chargement du projet...</p>
+    </div>
+
+    <div *ngIf="!loading && !project" class="error-message">
+      <p>Impossible de charger le projet. Vérifiez l'URL ou réessayez plus tard.</p>
+    </div>
+
+    <div *ngIf="!loading && project" class="project-content">
+      <div class="project-header">
+        <h1>{{ project.name }}</h1>
+        <div class="project-tech-tags">
+          <span *ngFor="let tech of project.technologies" class="tech-tag">{{ tech }}</span>
+        </div>
+      </div>
+
+      <!-- Présentation et définition -->
+      <section class="project-section">
+        <h2>Présentation</h2>
+        <div class="presentation-content">
+          <div class="context">
+            <h3>Contexte</h3>
+            <p>{{project.presentation.context}}</p>
+          </div>
+          <div class="definition">
+            <h3>Définition</h3>
+            <p>{{project.presentation.definition}}</p>
+          </div>
+          <div class="objectives">
+            <h3>Objectifs</h3>
+            <p>{{project.presentation.objectives}}</p>
+          </div>
+          <div class="challenges">
+            <h3>Enjeux et défis</h3>
+            <ul>
+              <li *ngFor="let challenge of project.presentation.challenges">{{challenge}}</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Étapes -->
+      <section class="project-section">
+        <h2>Étapes du Projet</h2>
+        <div class="steps-content">
+          <div class="analysis">
+            <h3>Analyse</h3>
+            <ul>
+              <li *ngFor="let step of project.steps.analysis">{{step}}</li>
+            </ul>
+          </div>
+          <div class="design">
+            <h3>Conception</h3>
+            <ul>
+              <li *ngFor="let step of project.steps.design">{{step}}</li>
+            </ul>
+          </div>
+          <div class="implementation">
+            <h3>Implémentation</h3>
+            <ul>
+              <li *ngFor="let step of project.steps.implementation">{{step}}</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Acteurs -->
+      <section class="project-section">
+        <h2>Acteurs et Interactions</h2>
+        <div class="actors-content">
+          <div class="main-actors">
+            <h3>Acteurs Principaux</h3>
+            <div class="actors-grid">
+              <div *ngFor="let actor of project.actors.main" class="actor-card">
+                <h4>{{actor.name}}</h4>
+                <p><strong>Rôle:</strong> {{actor.role}}</p>
+                <p><strong>Département:</strong> {{actor.department}}</p>
+                <div class="needs">
+                  <h5>Besoins:</h5>
+                  <ul>
+                    <li *ngFor="let need of actor.needs">{{need}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="interactions">
+            <h3>Interactions</h3>
+            <div class="interactions-list">
+              <div *ngFor="let interaction of project.actors.interactions" class="interaction-card">
+                <h4>{{interaction.actors.join(', ')}}</h4>
+                <p>{{interaction.description}}</p>
+                <p><strong>Fréquence:</strong> {{interaction.frequency}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Résultats -->
+      <section class="project-section">
+        <h2>Résultats</h2>
+        <div class="results-content">
+          <div class="personal-results">
+            <h3>Pour moi</h3>
+            <ul>
+              <li *ngFor="let result of project.results.personal">{{result}}</li>
+            </ul>
+          </div>
+          <div class="company-results">
+            <h3>Pour l'entreprise</h3>
+            <ul>
+              <li *ngFor="let result of project.results.company">{{result}}</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lendemains -->
+      <section class="project-section">
+        <h2>Lendemains du Projet</h2>
+        <div class="future-content">
+          <div class="immediate">
+            <h3>Futur immédiat</h3>
+            <ul>
+              <li *ngFor="let item of project.future.immediate">{{item}}</li>
+            </ul>
+          </div>
+          <div class="long-term">
+            <h3>À long terme</h3>
+            <ul>
+              <li *ngFor="let item of project.future.longTerm">{{item}}</li>
+            </ul>
+          </div>
+          <div class="current">
+            <h3>Aujourd'hui</h3>
+            <ul>
+              <li *ngFor="let item of project.future.current">{{item}}</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Analyse critique -->
+      <section class="project-section">
+        <h2>Analyse Critique</h2>
+        <div class="critical-analysis">
+          <p>{{project.criticalAnalysis}}</p>
+        </div>
+      </section>
+
+      <!-- Compétences -->
+      <section class="project-section">
+        <h2>Compétences Développées</h2>
+        <div class="skills-list">
+          <span *ngFor="let skill of project.relatedSkills" class="skill-tag">
+            {{skill}}
+          </span>
+        </div>
+      </section>
+
+      <!-- Liens -->
+      <section class="project-section" *ngIf="project?.github || project?.demo">
+        <h2>Liens</h2>
+        <div class="links">
+          <a *ngIf="project.github" [href]="project.github" target="_blank" class="project-link">
+            <fa-icon [icon]="['fab', 'github']"></fa-icon> GitHub
+          </a>
+          <a *ngIf="project.demo" [href]="project.demo" target="_blank" class="project-link">
+            <fa-icon [icon]="['fas', 'external-link-alt']"></fa-icon> Démonstration
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

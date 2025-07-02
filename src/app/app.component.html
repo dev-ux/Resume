@@ -69,10 +69,24 @@
             <i class="fas fa-blog"></i> {{ 'nav.blog' | translate }}
           </a>
         </li> -->
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/projects" routerLinkActive="active">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fas fa-project-diagram"></i> {{ 'nav.projects' | translate }}
           </a>
+          <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+            <li><a class="dropdown-item" routerLink="/projects">Tous les projets</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" routerLink="/projects/resume">Portfolio</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/wisetech">Wisetech</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/hairgo">HairGo</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/architecture">Architecture</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/java-project">Java Project</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/usecase">UseCase</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/pmt-frontend">PMT Frontend</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/kunto">Kunto</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/symfony">Symfony</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/astro-ecommerce">Astro E-commerce</a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/contact" routerLinkActive="active">
