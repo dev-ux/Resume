@@ -10,12 +10,12 @@
     <div class="collapse navbar-collapse" id="navbarContent" [class.show]="isMenuOpen">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/" routerLinkActive="active">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" (click)="closeMenu()">
             <i class="fas fa-home"></i> {{ 'nav.home' | translate }}
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/about" routerLinkActive="active">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active" (click)="closeMenu()">
             <i class="fas fa-user"></i> {{ 'nav.about' | translate }}
           </a>
         </li>
@@ -32,18 +32,12 @@
                 {{ 'nav.technical_skills' | translate }}
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" routerLink="/skills/technical/react" routerLinkActive="active">{{
-                    'nav.tech_skills.react' | translate }}</a></li>
-                <li><a class="dropdown-item" routerLink="/skills/technical/nodejs" routerLinkActive="active">{{
-                    'nav.tech_skills.nodejs' | translate }}</a></li>
-                <li><a class="dropdown-item" routerLink="/skills/technical/mongodb" routerLinkActive="active">{{
-                    'nav.tech_skills.mongodb' | translate }}</a></li>
-                <li><a class="dropdown-item" routerLink="/skills/technical/java" routerLinkActive="active">{{
-                    'nav.tech_skills.java' | translate }}</a></li>
-                <li><a class="dropdown-item" routerLink="/skills/technical/sql" routerLinkActive="active">{{
-                    'nav.tech_skills.sql' | translate }}</a></li>
-                <li><a class="dropdown-item" routerLink="/skills/technical/php" routerLinkActive="active">{{
-                    'nav.tech_skills.php' | translate }}</a></li>
+                <li><a class="dropdown-item" routerLink="/skills/technical/react" routerLinkActive="active" (click)="closeMenu()">{{ 'nav.tech_skills.react' | translate }}</a></li>
+                <li><a class="dropdown-item" routerLink="/skills/technical/nodejs" routerLinkActive="active" (click)="closeMenu()">{{ 'nav.tech_skills.nodejs' | translate }}</a></li>
+                <li><a class="dropdown-item" routerLink="/skills/technical/mongodb" routerLinkActive="active" (click)="closeMenu()">{{ 'nav.tech_skills.mongodb' | translate }}</a></li>
+                <li><a class="dropdown-item" routerLink="/skills/technical/java" routerLinkActive="active" (click)="closeMenu()">{{ 'nav.tech_skills.java' | translate }}</a></li>
+                <li><a class="dropdown-item" routerLink="/skills/technical/sql" routerLinkActive="active" (click)="closeMenu()">{{ 'nav.tech_skills.sql' | translate }}</a></li>
+                <li><a class="dropdown-item" routerLink="/skills/technical/php" routerLinkActive="active" (click)="closeMenu()">{{ 'nav.tech_skills.php' | translate }}</a></li>
               </ul>
             </li>
              <li class="dropdown-submenu">
@@ -74,16 +68,16 @@
             <i class="fas fa-project-diagram"></i> {{ 'nav.projects' | translate }}
           </a>
           <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
-            <li><a class="dropdown-item" routerLink="/projects">Tous les projets</a></li>
+            <li><a class="dropdown-item" routerLink="/projects" (click)="closeMenu()">Tous les projets</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" routerLink="/projects/resume">Portfolio</a></li>
-            <li><a class="dropdown-item" routerLink="/projects/wisetech">Wisetech</a></li>
-            <li><a class="dropdown-item" routerLink="/projects/hairgo">HairGo</a></li>
-            <li><a class="dropdown-item" routerLink="/projects/architecture">Architecture</a></li>
-            <li><a class="dropdown-item" routerLink="/projects/java-project">Java Project</a></li>
-            <li><a class="dropdown-item" routerLink="/projects/usecase">UseCase</a></li>
-            <li><a class="dropdown-item" routerLink="/projects/pmt-frontend">PMT Frontend</a></li>
-            <li><a class="dropdown-item" routerLink="/projects/kunto">Kunto</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/resume" (click)="closeMenu()">Portfolio</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/wisetech" (click)="closeMenu()">Wisetech</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/hairgo" (click)="closeMenu()">HairGo</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/architecture" (click)="closeMenu()">Architecture</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/java-project" (click)="closeMenu()">Java Project</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/usecase" (click)="closeMenu()">UseCase</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/pmt-frontend" (click)="closeMenu()">PMT Frontend</a></li>
+            <li><a class="dropdown-item" routerLink="/projects/kunto" (click)="closeMenu()">Kunto</a></li>
             <li><a class="dropdown-item" routerLink="/projects/symfony">Symfony</a></li>
             <li><a class="dropdown-item" routerLink="/projects/astro-ecommerce">Astro E-commerce</a></li>
           </ul>

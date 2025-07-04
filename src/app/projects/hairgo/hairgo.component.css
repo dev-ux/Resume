@@ -1,0 +1,162 @@
+.project-section {
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.project-subtitle {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  margin-left: -1px;
+  background-color: var(--primary-color);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  margin-bottom: 2rem;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-content {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+  left: 100%;
+  margin-left: 10px;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+  right: 100%;
+  margin-right: 10px;
+}
+
+.actors-grid,
+.results-grid,
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.actor-card,
+.result-card,
+.skill-card {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.skill-card ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.skill-card ul li a:hover {
+  color: var(--primary-color-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline {
+    padding: 1rem 0;
+  }
+  
+  .timeline:before {
+    left: 30px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+  
+  .timeline-content::before {
+    left: -30px;
+    margin-left: 0;
+  }
+  
+  .actors-grid,
+  .results-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-section {
+    padding: 1rem 0;
+  }
+  
+  .project-header {
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-content {
+    padding: 1rem;
+  }
+  
+  .actor-card,
+  .result-card,
+  .skill-card {
+    padding: 1rem;
+  }
+}

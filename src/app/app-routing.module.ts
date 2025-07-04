@@ -7,6 +7,8 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ResumeComponent } from './projects/resume/resume.component';
 import { WisetechComponent } from './projects/wisetech/wisetech.component';
+import { HairgoComponent } from './projects/hairgo/hairgo.component';
+import { ArchitectureComponent } from './projects/architecture/architecture.component';
 import { ReactSkillComponent } from './skills/react/react-skill.component';
 import { NodejsSkillComponent } from './skills/nodejs/nodejs-skill.component';
 import { MongodbSkillComponent } from './skills/mongodb/mongodb-skill.component';
@@ -41,6 +43,8 @@ const routes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'projects/resume', component: ResumeComponent },
   { path: 'projects/wisetech', component: WisetechComponent },
+  { path: 'projects/hairgo', component: HairgoComponent },
+  { path: 'projects/architecture', component: ArchitectureComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'blog/:id', component: BlogDetailComponent }
 ];

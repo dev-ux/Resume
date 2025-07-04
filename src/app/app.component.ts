@@ -26,6 +26,10 @@ export class AppComponent implements OnInit {
     this.translate.use('fr');
   }
 
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
+
   ngOnInit(): void {
     // Initialization code if needed
   }
