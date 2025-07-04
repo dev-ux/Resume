@@ -7,7 +7,7 @@
       "technologies": ["Angular", "TypeScript", "HTML5", "CSS3", "Bootstrap"],
       "github": "https://github.com/dev-ux/Resume",
       "demo": "https://dev-ux.github.io/Resume/",
-      "image": "assets/images/projects/resume.png"
+      "image": "assets/images/projects/portfolio.png"
     },
     {
       "id": "wisetech",
@@ -27,22 +27,14 @@
       "demo": "https://dev-ux.github.io/HairGo/",
       "image": "assets/images/projects/hairgo.png"
     },
-    {
-      "id": "marketplace",
-      "name": "Marketplace",
-      "description": "Plateforme de commerce électronique avec React et Node.js",
-      "technologies": ["React", "Node.js", "MongoDB", "Redux"],
-      "github": "https://github.com/dev-ux/Marketplace",
-      "demo": "https://dev-ux.github.io/Marketplace/",
-      "image": "assets/images/projects/marketplace.png"
-    },
+    
     {
       "id": "architecture",
       "name": "Architecture Logicielle",
       "description": "Études et implémentations d'architectures logicielles",
       "technologies": ["Java", "Spring Boot", "Docker", "Kubernetes"],
       "github": "https://github.com/dev-ux/Architecture_logicielle",
-      "image": "assets/images/projects/architecture.png"
+      "image": "assets/images/projects/archi.png"
     },
     {
       "id": "java-project",
@@ -50,7 +42,7 @@
       "description": "Projet Java avec Spring Boot et JPA",
       "technologies": ["Java", "Spring Boot", "JPA", "MySQL"],
       "github": "https://github.com/dev-ux/java-project",
-      "image": "assets/images/projects/java-project.png"
+      "image": "assets/images/projects/java.png"
     },
     {
       "id": "usecase",
@@ -72,28 +64,26 @@
     {
       "id": "kunto",
       "name": "Kunto",
-      "description": "Application de suivi d'activité physique",
-      "technologies": ["React", "Node.js", "MongoDB"],
-      "github": "https://github.com/dev-ux/Kunto",
-      "demo": "https://dev-ux.github.io/Kunto/",
-      "image": "assets/images/projects/kunto.png"
+      "description": "Application mobile et web pour la pratique sportive adaptée aux personnes en situation de handicap",
+      "technologies": ["React Native", "React", "Symfony", "AWS"],
+      "github": "https://github.com/dev-ux/kunto",
+      "image": "assets/images/projects/kunto.jpg"
     },
     {
       "id": "symfony",
       "name": "Symfony Project",
-      "description": "Projet Symfony avec API REST",
-      "technologies": ["Symfony", "PHP", "MySQL", "API REST"],
+      "description": "Projet personnel de gestion de données avec Symfony",
+      "technologies": ["Symfony", "PHP", "MySQL", "Doctrine"],
       "github": "https://github.com/dev-ux/SymfonyProject",
       "image": "assets/images/projects/symfony.png"
     },
     {
       "id": "astro-ecommerce",
       "name": "Astro E-commerce",
-      "description": "Application e-commerce avec Astro",
-      "technologies": ["Astro", "React", "Node.js", "MongoDB"],
+      "description": "Projet personnel de marketplace avec Astro",
+      "technologies": ["Astro", "React", "TypeScript", "HTML/CSS"],
       "github": "https://github.com/dev-ux/astro-ecommerce",
-      "demo": "https://dev-ux.github.io/astro-ecommerce/",
-      "image": "assets/images/projects/astro-ecommerce.png"
+      "image": "assets/images/projects/astro.png"
     },
     {
       "id": "landingpage",
@@ -102,7 +92,7 @@
       "technologies": ["React", "HTML5", "CSS3"],
       "github": "https://github.com/dev-ux/LandingPage-react",
       "demo": "https://dev-ux.github.io/LandingPage-react/",
-      "image": "assets/images/projects/landingpage.png"
+      "image": "assets/images/projects/landing.png"
     },
     {
       "id": "node-api",
