@@ -1,14 +1,24 @@
-<section class="timeline-section">
+<section class="timeline-section" style="margin-top: 100px;">
   <div class="container">
     <h1>Mon Parcours</h1>
     <div class="timeline">
 
       <!-- Expériences -->
       <div class="timeline-item left">
-        <div class="timeline-content">
+        <div class="timeline-card" (click)="openModal('wisetech')">
           <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
           <span class="date">Sept. 2024 – Aujourd’hui · Draveil</span>
           <h3>Développeur Backend – Wisetech-ENG</h3>
+          <img src="assets/images/wisetech.png" alt="Wisetech-ENG" class="timeline-image">
+        </div>
+      </div>
+
+      <!-- Modal Wisetech -->
+      <div class="modal-overlay" id="wisetech-modal">
+        <div class="modal-content">
+          <span class="close-modal" (click)="closeModal()">&times;</span>
+          <h3>Développeur Backend – Wisetech-ENG</h3>
+          <span class="date">Sept. 2024 – Aujourd’hui · Draveil</span>
           <ul>
             <li>Refonte du site principal avec <strong>Next.js</strong>.</li>
             <li>Conception de <strong>Clowoo</strong>, une plateforme web façon Vinted : création, échange, vente d’articles entre utilisateurs.</li>
@@ -17,153 +27,190 @@
             <li>Architecture mobile pensée dès le départ : mise en place de la version <strong>React Native</strong> avec un backend Symfony/API partagé.</li>
             <li>Connexion unifiée pour les utilisateurs entre web et mobile via API.</li>
           </ul>
-          <div class="tags">
-            <span>Next.js</span><span>React Native</span><span>PHP</span><span>Symfony</span><span>JWT</span><span>API</span><span>MySQL</span><span>Bootstrap</span>
-          </div>
+          <app-technology-link [tags]="['Next.js', 'React Native', 'PHP', 'Symfony', 'JWT', 'API', 'MySQL', 'Bootstrap']"></app-technology-link>
         </div>
       </div>
       
 
       <div class="timeline-item right">
-        <div class="timeline-content">
+        <div class="timeline-card" (click)="openModal('kunto')">
           <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
           <span class="date">Sept. 2023 – Juil. 2024 · Paris</span>
           <h3>Développeur Full Stack (Alternance) – Kunto</h3>
+          <img src="assets/images/kunto.png" alt="Kunto" class="timeline-image">
+        </div>
+      </div>
+
+      <!-- Modal Kunto -->
+      <div class="modal-overlay" id="kunto-modal">
+        <div class="modal-content">
+          <span class="close-modal" (click)="closeModal()">&times;</span>
+          <h3>Développeur Full Stack (Alternance) – Kunto</h3>
+          <span class="date">Sept. 2023 – Juil. 2024 · Paris</span>
           <ul>
-            <li>Participation au développement de l’application mobile <strong>Kunto</strong>, dédiée au sport adapté aux personnes en situation de handicap.</li>
-            <li>Création d’entités backend sous Symfony et amélioration du front mobile existant.</li>
-            <li>Démarrage from scratch de l’application web (Symfony en back / React en front) avec appels API personnalisés.</li>
+            <li>Participation au développement de l'application mobile <strong>Kunto</strong>, dédiée au sport adapté aux personnes en situation de handicap.</li>
+            <li>Création d'entités backend sous Symfony et amélioration du front mobile existant.</li>
+            <li>Démarrage from scratch de l'application web (Symfony en back / React en front) avec appels API personnalisés.</li>
           </ul>
-          <div class="tags">
-            <span>Symfony</span><span>React</span><span>API</span><span>Mobile</span><span>Accessibilité</span>
-          </div>
+          <app-technology-link [tags]="['Symfony', 'React', 'API', 'Mobile', 'Accessibilité']"></app-technology-link>
         </div>
       </div>
       
 
       <div class="timeline-item left">
-        <div class="timeline-content">
+        <div class="timeline-card" (click)="openModal('access')">
           <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
           <span class="date">2024 · France / Sénégal</span>
           <h3>Développeur Full Stack – Access Surveillance</h3>
+          <img src="assets/images/access.jpg" alt="Access Surveillance" class="timeline-image">
+        </div>
+      </div>
+
+      <!-- Modal Access Surveillance -->
+      <div class="modal-overlay" id="access-modal">
+        <div class="modal-content">
+          <span class="close-modal" (click)="closeModal()">&times;</span>
+          <h3>Développeur Full Stack – Access Surveillance</h3>
+          <span class="date">2024 · France / Sénégal</span>
           <ul>
             <li>Refonte du site vitrine de l'entreprise avec HTML, CSS, JavaScript, PHP et MySQL.</li>
-            <li>Développement d’une application mobile no-code (Adalo) pour la vérification de signature des agents.</li>
-            <li>Conception d’une application web B2B de gestion de plannings pour les entreprises, avec Laravel.</li>
+            <li>Développement d'une application mobile no-code (Adalo) pour la vérification de signature des agents.</li>
+            <li>Conception d'une application web B2B de gestion de plannings pour les entreprises, avec Laravel.</li>
           </ul>
-          <div class="tags">
-            <span>Laravel</span><span>PHP</span><span>MySQL</span><span>Adalo</span><span>No-code</span><span>JavaScript</span>
-          </div>
+          <app-technology-link [tags]="['Laravel', 'PHP', 'MySQL', 'Adalo', 'No-code', 'JavaScript']"></app-technology-link>
         </div>
       </div>
       
 
       <div class="timeline-item right">
-        <div class="timeline-content">
+        <div class="timeline-card" (click)="openModal('wisetech-stagiaire')">
           <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
           <span class="date">Fév. 2022 – Oct. 2022 · Draveil</span>
           <h3>Développeur Back-End (Stagiaire) – Wisetech-ENG</h3>
-          <ul>
-            <li>Développement de site e-commerce (PHP, HTML, JS, API, paiements).</li>
-          </ul>
+          <img src="assets/images/wisetech.png" alt="Wisetech-ENG Stagiaire" class="timeline-image">
         </div>
       </div>
 
-      <!-- Formations -->
-     <!-- ISCOD -->
-<div class="timeline-item right">
-  <div class="timeline-content">
-    <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
-    <span class="date">Depuis Sept. 2023</span>
-    <h3>Mastère Génie Logiciel – ISCOD (France)</h3>
-    <p>
-      Formation en alternance au sein de l'<strong>ISCOD</strong>, école 100% en ligne spécialisée dans les métiers du digital, du développement et du management. Elle propose une pédagogie innovante centrée sur les besoins du marché.
-    </p>
-    <div class="tags">
-      <span>Développement</span><span>Projet</span><span>Alternance</span>
+      <!-- Modal Wisetech Stagiaire -->
+      <div class="modal-overlay" id="wisetech-stagiaire-modal">
+        <div class="modal-content">
+          <span class="close-modal" (click)="closeModal()">&times;</span>
+          <h3>Développeur Back-End (Stagiaire) – Wisetech-ENG</h3>
+          <span class="date">Fév. 2022 – Oct. 2022 · Draveil</span>
+          <ul>
+            <li>Développement d'un module de gestion des paiements avec PHP, MySQL et API Stripe.</li>
+          </ul>
+          <app-technology-link [tags]="['PHP', 'HTML', 'JS', 'API', 'paiements']"></app-technology-link>
+        </div>
+      </div>
+
+      <!-- EFREI Paris -->
+      <div class="timeline-item left">
+        <div class="timeline-card" (click)="openModal('efrei')">
+          <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+          <span class="date">Sept. 2021 – 2023</span>
+          <h3>Mastère E-Business & Transformation Digitale – EFREI Paris</h3>
+          <img src="assets/images/efrei.jpg" alt="EFREI Paris" class="timeline-image">
+        </div>
+      </div>
+
+      <!-- Modal EFREI -->
+      <div class="modal-overlay" id="efrei-modal">
+        <div class="modal-content">
+          <span class="close-modal" (click)="closeModal()">&times;</span>
+          <h3>Mastère E-Business & Transformation Digitale – EFREI Paris</h3>
+          <span class="date">Sept. 2021 – 2023</span>
+          <p>
+            Après mon bachelor, j'ai intégré ce mastère à l'<strong>EFREI Paris</strong>, grande école d'ingénieurs reconnue pour sa pédagogie axée sur l'innovation et la technologie. Cette formation m'a permis d'acquérir des compétences solides en stratégie digitale, e-commerce et conduite du changement.
+          </p>
+          <p>
+            J'y ai appris à concevoir et piloter des <strong>campagnes publicitaires</strong>, analyser les <strong>KPI</strong>, créer des supports de communication visuelle (affiches via <strong>Photoshop</strong>, montages vidéo avec <strong>Premiere Pro</strong>), le tout dans un environnement agile et collaboratif.
+          </p>
+          <p>
+            La diversité des enseignements m'a également permis d'élargir mes connaissances, notamment en <strong>cybersécurité</strong>, un domaine que je maîtrisais déjà mais dans lequel j'ai continué à progresser.
+          </p>
+          <app-technology-link [tags]="['Stratégie Digitale', 'Publicité', 'Photoshop', 'Agilité', 'Cybersécurité']"></app-technology-link>
+        </div>
+      </div>
+
+      <!-- EFREI / ITA -->
+      <div class="timeline-item right">
+        <div class="timeline-card" (click)="openModal('efrei-ita')">
+          <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+          <span class="date">Sept. 2019 – Juin 2020</span>
+          <h3>Bachelor Stratégie Digitale – EFREI / ITA Abidjan</h3>
+          <img src="assets/images/ITA.png" alt="EFREI / ITA" class="timeline-image">
+        </div>
+      </div>
+
+      <!-- Modal EFREI/ITA -->
+      <div class="modal-overlay" id="efrei-ita-modal">
+        <div class="modal-content">
+          <span class="close-modal" (click)="closeModal()">&times;</span>
+          <h3>Bachelor Stratégie Digitale – EFREI / ITA Abidjan</h3>
+          <span class="date">Sept. 2019 – Juin 2020</span>
+          <p>
+            Après l'obtention de mon diplôme en développement, je me suis réengagé dans un nouveau parcours pour ajouter une corde à mon arc. Ce programme de <strong>bachelor en stratégie digitale</strong>, proposé en partenariat entre l'<strong>EFREI Paris</strong> et le <strong>groupe ITA</strong>, m'a permis de développer des compétences solides en gestion de projet, en marketing numérique et en communication digitale.
+          </p>
+          <p>
+            Ce cursus, précédé de test sélectif, a abouti à l'obtention de mon diplôme et a marqué le début de mon aventure en France pour poursuivre mes études supérieures dans le numérique.
+          </p>
+          <app-technology-link [tags]="['Stratégie Digitale', 'Marketing', 'Projet', 'EFREI', 'ITA']"></app-technology-link>
+        </div>
+      </div>
+
+      <!-- Licence Pro – ITA -->
+      <div class="timeline-item left">
+        <div class="timeline-card" (click)="openModal('licence-ita')">
+          <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+          <span class="date">Oct. 2018 – Mai 2019</span>
+          <h3>Licence Pro – ITA Abidjan</h3>
+          <img src="assets/images/ITA.png" alt="Licence ITA" class="timeline-image">
+        </div>
+      </div>
+
+      <!-- Modal Licence ITA -->
+      <div class="modal-overlay" id="licence-ita-modal">
+        <div class="modal-content">
+          <span class="close-modal" (click)="closeModal()">&times;</span>
+          <h3>Licence Pro – ITA Abidjan</h3>
+          <span class="date">Oct. 2018 – Mai 2019</span>
+          <p>
+            Parcours sanctionné par l'obtention du <strong>diplôme de Licence Professionnelle en Sciences Informatiques</strong>, option <strong>Développement d'Applications et Systèmes d'Information</strong>. Cette 3<sup>e</sup> année est venue compléter mes bases acquises en DTS, avec un focus sur les architectures logicielles, les projets d'envergure, et la gestion de SI.
+          </p>
+          <p>
+            L'<strong>Institut des Technologies d'Abidjan</strong> reste un acteur majeur de la formation numérique en Côte d'Ivoire.
+          </p>
+          <app-technology-link [tags]="['Développement', 'Systèmes d\'Information', 'Licence', 'Architecture']"></app-technology-link>
+        </div>
+      </div>
+
+      <!-- BTS – ITA -->
+      <div class="timeline-item right">
+        <div class="timeline-card" (click)="openModal('dts-ita')">
+          <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+          <span class="date">Oct. 2016 – Juil. 2018</span>
+          <h3>DTS Informatique – ITA Abidjan</h3>
+          <img src="assets/images/ITA.png" alt="DTS ITA" class="timeline-image">
+        </div>
+      </div>
+
+      <!-- Modal DTS ITA -->
+      <div class="modal-overlay" id="dts-ita-modal">
+        <div class="modal-content">
+          <span class="close-modal" (click)="closeModal()">&times;</span>
+          <h3>DTS Informatique – ITA Abidjan</h3>
+          <span class="date">Oct. 2016 – Juil. 2018</span>
+          <p>
+            Diplôme de Technicien Supérieur en <strong>Informatique et Développement d'Applications</strong>. Affecté à l'<strong>Institut des Technologies d'Abidjan</strong> après l'obtention du BAC, j'y ai posé les bases solides de ma carrière en informatique. Le programme couvre la programmation orientée objet, les bases de données, l'algorithmique, et les architectures client-serveur. L'ITA est un établissement de référence numérique en Côte d'Ivoire.
+          </p>
+          <app-technology-link [tags]="['Développement', 'Programmation', 'Base', 'POO', 'ITA']"></app-technology-link>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-<!-- EFREI Paris -->
-<div class="timeline-item left">
-  <div class="timeline-content">
-    <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
-    <span class="date">Sept. 2021 – 2023</span>
-    <h3>Mastère E-Business & Transformation Digitale – EFREI Paris</h3>
-    <p>
-      Après mon bachelor, j’ai intégré ce mastère à l’<strong>EFREI Paris</strong>, grande école d’ingénieurs reconnue pour sa pédagogie axée sur l'innovation et la technologie. Cette formation m’a permis d'acquérir des compétences solides en stratégie digitale, e-commerce et conduite du changement.
-    </p>
-    <p>
-      J’y ai appris à concevoir et piloter des <strong>campagnes publicitaires</strong>, analyser les <strong>KPI</strong>, créer des supports de communication visuelle (affiches via <strong>Photoshop</strong>, montages vidéo avec <strong>Premiere Pro</strong>), le tout dans un environnement agile et collaboratif.
-    </p>
-    <p>
-      La diversité des enseignements m’a également permis d’élargir mes connaissances, notamment en <strong>cybersécurité</strong>, un domaine que je maîtrisais déjà mais dans lequel j’ai continué à progresser.
-    </p>
-    <div class="tags">
-      <span>Stratégie Digitale</span><span>Publicité</span><span>Photoshop</span><span>Agilité</span><span>Cybersécurité</span>
-    </div>
-  </div>
-</div>
+      </div>
 
 
-<!-- EFREI / ITA -->
-<div class="timeline-item right">
-  <div class="timeline-content">
-    <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
-    <span class="date">Sept. 2019 – Juin 2020</span>
-    <h3>Bachelor Stratégie Digitale – EFREI / ITA Abidjan</h3>
-    <p>
-      Après l’obtention de mon diplôme en développement, je me suis réengagé dans un nouveau parcours pour ajouter une corde à mon arc. Ce programme de <strong>bachelor en stratégie digitale</strong>, proposé en partenariat entre l’<strong>EFREI Paris</strong> et le <strong>groupe ITA</strong>, m’a permis de développer des compétences solides en gestion de projet, en marketing numérique et en communication digitale.
-    </p>
-    <p>
-      Ce cursus, précédé de test sélectif, a abouti à l’obtention de mon diplôme et a marqué le début de mon aventure en France pour poursuivre mes études supérieures dans le numérique.
-    </p>
-    <div class="tags">
-      <span>Stratégie Digitale</span><span>Marketing</span><span>Projet</span><span>EFREI</span><span>ITA</span>
-    </div>
-  </div>
-</div>
-
-
-<!-- Licence Pro – ITA -->
-<div class="timeline-item left">
-  <div class="timeline-content">
-    <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
-    <span class="date">Oct. 2018 – Mai 2019</span>
-    <h3>Licence Pro – ITA Abidjan</h3>
-    <p>
-      Parcours sanctionné par l’obtention du <strong>diplôme de Licence Professionnelle en Sciences Informatiques</strong>, option <strong>Développement d’Applications et Systèmes d’Information</strong>. Cette 3<sup>e</sup> année est venue compléter mes bases acquises en DTS, avec un focus sur les architectures logicielles, les projets d’envergure, et la gestion de SI.
-    </p>
-    <p>
-      L’<strong>Institut des Technologies d’Abidjan</strong> reste un acteur majeur de la formation numérique en Côte d’Ivoire.
-    </p>
-    <div class="tags">
-      <span>Développement</span><span>Systèmes d’Information</span><span>Licence</span><span>Architecture</span>
-    </div>
-  </div>
-</div>
-
-
-<!-- BTS – ITA -->
-<div class="timeline-item right">
-  <div class="timeline-content">
-    <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
-    <span class="date">Oct. 2016 – Juil. 2018</span>
-    <h3>DTS Informatique – ITA Abidjan</h3>
-    <p>
-      Diplôme de Technicien Supérieur en <strong>Informatique et Développement d'Applications</strong>. Affecté à l’<strong>Institut des Technologies d’Abidjan</strong> après l’obtention du BAC, j’y ai posé les bases solides de ma carrière en informatique. Le programme couvre la programmation orientée objet, les bases de données, l’algorithmique, et les architectures client-serveur. L’ITA est un établissement de référence numérique en Côte d’Ivoire.
-    </p>
-    <div class="tags">
-      <span>Développement</span><span>Programmation</span><span>Base</span><span>POO</span><span>ITA</span>
-    </div>
-  </div>
-</div>
-
-
-
-    </div>
-  </div>
 </section>
 
 

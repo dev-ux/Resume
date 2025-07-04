@@ -45,7 +45,6 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent,
     SkillsComponent,
     ProjectsComponent,
     ReactSkillComponent,
