@@ -59,7 +59,7 @@
       "technologies": ["Angular", "TypeScript", "HTML5", "CSS3"],
       "github": "https://github.com/dev-ux/pmt-frontend",
       "demo": "https://dev-ux.github.io/pmt-frontend/",
-      "image": "assets/images/projects/pmt-frontend.png"
+      "image": "assets/images/projects/pmt.png"
     },
     {
       "id": "kunto",
@@ -100,7 +100,7 @@
       "description": "API REST avec Node.js et Express",
       "technologies": ["Node.js", "Express", "MongoDB"],
       "github": "https://github.com/dev-ux/Node.js-REST-API-",
-      "image": "assets/images/projects/node-api.png"
+      "image": "assets/images/projects/api.png"
     }
   ]
 }
