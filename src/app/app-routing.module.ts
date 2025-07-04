@@ -9,6 +9,12 @@ import { ResumeComponent } from './projects/resume/resume.component';
 import { WisetechComponent } from './projects/wisetech/wisetech.component';
 import { HairgoComponent } from './projects/hairgo/hairgo.component';
 import { ArchitectureComponent } from './projects/architecture/architecture.component';
+import { JavaProjectComponent } from './projects/java-project/java-project.component';
+import { UsecaseComponent } from './projects/usecase/usecase.component';
+import { PmtFrontendComponent } from './projects/pmt-frontend/pmt-frontend.component';
+import { KuntoComponent } from './projects/kunto/kunto.component';
+import { SymfonyComponent } from './projects/symfony/symfony.component';
+import { AstroEcommerceComponent } from './projects/astro-ecommerce/astro-ecommerce.component';
 import { ReactSkillComponent } from './skills/react/react-skill.component';
 import { NodejsSkillComponent } from './skills/nodejs/nodejs-skill.component';
 import { MongodbSkillComponent } from './skills/mongodb/mongodb-skill.component';
@@ -45,6 +51,12 @@ const routes: Routes = [
   { path: 'projects/wisetech', component: WisetechComponent },
   { path: 'projects/hairgo', component: HairgoComponent },
   { path: 'projects/architecture', component: ArchitectureComponent },
+  { path: 'projects/java-project', component: JavaProjectComponent },
+  { path: 'projects/usecase', component: UsecaseComponent },
+  { path: 'projects/pmt-frontend', component: PmtFrontendComponent },
+  { path: 'projects/kunto', component: KuntoComponent },
+  { path: 'projects/symfony', component: SymfonyComponent },
+  { path: 'projects/astro-ecommerce', component: AstroEcommerceComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'blog/:id', component: BlogDetailComponent }
 ];
