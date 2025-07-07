@@ -15,7 +15,6 @@ export class SkillsComponent implements OnInit {
     'Outils',
   ] as const;
 
-
   categoryClasses = {
     'Ingénierie Logicielle': 'logicielle',
     'Langages/frameworks': 'frameworks',
@@ -31,6 +30,9 @@ export class SkillsComponent implements OnInit {
     'Outils': 'Outils et technologies',
     'Langues': 'Langues'
   } as const;
+
+  selectedSkill: Skill | null = null;
+  isModalOpen = false;
 
   constructor(
     private skillsService: SkillsService,
@@ -49,11 +51,24 @@ export class SkillsComponent implements OnInit {
     return this.skillsService.getSkillsByCategory(category);
   }
 
-  getStars(level: number): number[] {
-    return Array(level).fill(0);
+  getStars(level: number): string[] {
+    const stars = [];
+    const actualLevel = level || 0; // Handle undefined levels
+    for (let i = 0; i < 5; i++) {
+      stars.push(i < actualLevel ? 'filled' : 'empty');
+    }
+    return stars;
   }
-  
-  
+
+  openModal(skill: Skill) {
+    this.selectedSkill = skill;
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.selectedSkill = null;
+    this.isModalOpen = false;
+  }
 
   getCategoryClass(category: keyof typeof this.categoryClasses): string {
     return this.categoryClasses[category];

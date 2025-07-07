@@ -1,20 +1,66 @@
 <section class="skills" style="margin-top: 150px;">
-  <div class="container" >
+  <div class="container">
     <h2>{{ 'skills.title' | translate }}</h2>
     <div *ngFor="let category of categories" class="skill-category-block">
       <h3 class="category-title" style="margin-top: 100px;">{{ categoryNames[category] }}</h3>
-
       <div class="skills-list" style="margin-bottom: 100px;">
-        <div *ngFor="let skill of getSkillsByCategory(category)" class="skill-card">
+        <div *ngFor="let skill of getSkillsByCategory(category)" class="skill-card" (click)="openModal(skill)" style="cursor: pointer;">
           <img *ngIf="skill.logo" [src]="skill.logo" alt="{{ skill.name }} logo" class="skill-logo" />
-          
           <div class="skill-info">
             <span class="skill-name">{{ skill.name }}</span>
-            <span class="cert-badge" *ngIf="skill.certified">Certified</span>
+            <!-- <span class="cert-badge" *ngIf="skill.certified">Certified</span> -->
             <div class="projects-used" *ngIf="skill.projects.length > 0">
               <span class="badge" *ngFor="let project of skill.projects">{{ project }}</span>
             </div>
+            <div class="skill-rating">
+              <span *ngFor="let star of getStars(skill.level || 0)">
+                <i class="fas fa-star {{ star }}"></i>
+              </span>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" [class.open]="isModalOpen">
+    <div class="modal-content">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <div *ngIf="selectedSkill">
+        <h2>{{ selectedSkill.name }}</h2>
+        <div class="modal-body">
+          <section class="introduction">
+            <h3>Introduction</h3>
+            <p>{{ selectedSkill.introduction }}</p>
+          </section>
+
+          <section class="experience">
+            <h3>Mon expérience vécue</h3>
+            <p>{{ selectedSkill.experience }}</p>
+          </section>
+
+          <section class="competence-level">
+            <h3>Mon niveau de compétence</h3>
+            <div class="skill-rating">
+              <span *ngFor="let star of getStars(selectedSkill.level || 0)">
+                <i class="fas fa-star {{ star }}"></i>
+              </span>
+            </div>
+            <p>{{ selectedSkill.competenceLevel }}</p>
+          </section>
+
+          <section class="projects" *ngIf="selectedSkill.projects.length > 0 || selectedSkill.projectLink">
+            <h3>Projets</h3>
+            <div class="projects-content">
+              <div class="projects-list" *ngIf="selectedSkill.projects.length > 0">
+                <span class="badge" *ngFor="let project of selectedSkill.projects">{{ project }}</span>
+              </div>
+              <a *ngIf="selectedSkill.projectLink" [href]="selectedSkill.projectLink" target="_blank" class="project-link">
+                Voir tous les projets
+              </a>
+            </div>
+          </section>
         </div>
       </div>
     </div>
