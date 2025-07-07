@@ -1,22 +1,21 @@
-<section class="skills">
-  <div class="container">
+<section class="skills" style="margin-top: 150px;">
+  <div class="container" >
     <h2>{{ 'skills.title' | translate }}</h2>
-    <div class="skills-grid">
-      <div class="skill-category" *ngFor="let category of categories">
-        <h3>{{ category === 'frontend' ? categoryNames.frontend : 
-              category === 'backend' ? categoryNames.backend : 
-              category === 'tools' ? categoryNames.tools : 
-              categoryNames.human }}</h3>
-        <ul>
-          <li *ngFor="let skill of getSkillsByCategory(category)">
-            {{ skill.name }}
+    <div *ngFor="let category of categories" class="skill-category-block">
+      <h3 class="category-title" style="margin-top: 100px;">{{ categoryNames[category] }}</h3>
+
+      <div class="skills-list" style="margin-bottom: 100px;">
+        <div *ngFor="let skill of getSkillsByCategory(category)" class="skill-card">
+          <img *ngIf="skill.logo" [src]="skill.logo" alt="{{ skill.name }} logo" class="skill-logo" />
+          
+          <div class="skill-info">
+            <span class="skill-name">{{ skill.name }}</span>
+            <span class="cert-badge" *ngIf="skill.certified">Certified</span>
             <div class="projects-used" *ngIf="skill.projects.length > 0">
-              <span class="badge" *ngFor="let project of skill.projects">
-                {{ project }}
-              </span>
+              <span class="badge" *ngFor="let project of skill.projects">{{ project }}</span>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>

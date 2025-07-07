@@ -8,30 +8,56 @@ import { ProjectsService } from '../services/projects.service';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-  categories = ['frontend', 'backend', 'tools', 'human'];
+  categories = [
+    'Ingénierie Logicielle',
+    'Langages/frameworks',
+    'Soft skills',
+    'Outils',
+  ] as const;
+
+
+  categoryClasses = {
+    'Ingénierie Logicielle': 'logicielle',
+    'Langages/frameworks': 'frameworks',
+    'Soft skills': 'softskills',
+    'Outils': 'outils',
+    'Langues': 'langues'
+  } as const;
+
   categoryNames = {
-    frontend: 'Frontend',
-    backend: 'Backend',
-    tools: 'Tools & Technologies',
-    human: 'Human Skills'
-  };
+    'Ingénierie Logicielle': 'Ingénierie Logicielle',
+    'Langages/frameworks': 'Langages et frameworks',
+    'Soft skills': 'Compétences relationnelles',
+    'Outils': 'Outils et technologies',
+    'Langues': 'Langues'
+  } as const;
 
   constructor(
     private skillsService: SkillsService,
     private projectsService: ProjectsService
   ) {}
 
-  ngOnInit() {
-    // Initialize projects for each skill
+  ngOnInit(): void {
+    // Met à jour les projets liés aux compétences
     this.skillsService.skills.forEach(skill => {
-      this.skillsService.updateProjectsForSkill(
-        skill.name,
-        this.projectsService.getProjectsForSkill(skill.name)
-      );
+      const projects = this.projectsService.getProjectsForSkill(skill.name);
+      this.skillsService.updateProjectsForSkill(skill.name, projects);
     });
   }
 
   getSkillsByCategory(category: string): Skill[] {
     return this.skillsService.getSkillsByCategory(category);
   }
+
+  getStars(level: number): number[] {
+    return Array(level).fill(0);
+  }
+  
+  
+
+  getCategoryClass(category: keyof typeof this.categoryClasses): string {
+    return this.categoryClasses[category];
+  }
+
+
 }
