@@ -56,7 +56,7 @@
               <div class="projects-list" *ngIf="selectedSkill.projects.length > 0">
                 <span class="badge" *ngFor="let project of selectedSkill.projects">{{ project }}</span>
               </div>
-              <a *ngIf="selectedSkill.projectLink" [href]="selectedSkill.projectLink" target="_blank" class="project-link">
+              <a [routerLink]="['/projects']" class="project-link">
                 Voir tous les projets
               </a>
             </div>

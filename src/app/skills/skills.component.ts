@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SkillsService, Skill } from '../services/skills.service';
 import { ProjectsService } from '../services/projects.service';
 
